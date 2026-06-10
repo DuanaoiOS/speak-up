@@ -1,0 +1,84 @@
+{
+  "week": 4,
+  "day": 4,
+  "title": "处理问题与投诉",
+  "sentenceFrames": [
+    {
+      "pattern": "：I understand [their feeling / situation]. Here's what I can do: [solution].",
+      "usage": "处理别人的投诉/不满——先共情、再说解法。这个顺序不能反。",
+      "example": "I understand how frustrating this must be. Here's what I can do: I'll process a refund right now and send you a confirmation email within 5 minutes.",
+      "substitutions": [
+        "顾客说菜等太久：I understand _____. Here's what I can do: _____.",
+        "同事说你没及时回复消息：I understand _____. Here's what I can do: _____.",
+        "朋友抱怨你取消了聚会：I understand _____. Here's what I can do: _____.",
+        "你的真实场景：I understand _____. Here's what I can do: _____."
+      ]
+    },
+    {
+      "pattern": "：I'm not happy with [issue]. / There seems to be a problem with [something]. Can we figure this out?",
+      "usage": "你作为顾客/用户去投诉或反映问题。坚定但礼貌。",
+      "example": "Hi, there seems to be a problem with my order — I was charged twice. Can we figure this out?",
+      "substitutions": [
+        "酒店房间有问题：I'm not happy with **the room — it's not what I booked.** Can we _____?",
+        "账单不对：There seems to be a problem with **the bill. It has items I didn't order.** Can we _____?",
+        "服务不满意：I wanted to bring something to your attention. _____. What can we do about this?",
+        "你自己遇到过的问题：There seems to be a problem with _____. Can we _____?"
+      ]
+    },
+    {
+      "pattern": "：Let me look into that and get back to you by [specific time].",
+      "usage": "你暂时解决不了，需要调查后再回复。关键是给一个具体的时间承诺。",
+      "example": "I don't have the answer right now, but let me look into that and get back to you by end of day tomorrow.",
+      "substitutions": [
+        "同事问你一个你答不上来的问题：Let me look into that and get back to you by _____.",
+        "客户问一个技术问题：I'll need to check with the team on that. Let me get back to you by _____.",
+        "朋友问你能不能帮一个你不知道能不能帮的忙：Let me _____ and get back to you by _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "这不应该发生的",
+      "english": "this shouldn't have happened / this is not the experience we want you to have"
+    },
+    {
+      "chinese": "我来帮你处理",
+      "english": "let me take care of this for you / I'll handle this"
+    },
+    {
+      "chinese": "我理解你的不满",
+      "english": "I understand your frustration / I can see why you'd be upset"
+    },
+    {
+      "chinese": "我们会尽快解决",
+      "english": "we'll get this sorted out as soon as possible"
+    },
+    {
+      "chinese": "给你带来不便，抱歉",
+      "english": "sorry for the inconvenience / I apologize for the trouble"
+    },
+    {
+      "chinese": "这不是借口，但是...",
+      "english": "I'm not making excuses, but... / not to make excuses, but..."
+    },
+    {
+      "chinese": "你希望我怎么处理？",
+      "english": "how would you like me to handle this? / what would work best for you?"
+    },
+    {
+      "chinese": "我马上就办",
+      "english": "I'm on it / I'll take care of it right away"
+    },
+    {
+      "chinese": "我帮你跟进",
+      "english": "I'll follow up on this / let me chase that up"
+    },
+    {
+      "chinese": "这样解决你满意吗？",
+      "english": "does that work for you? / are you happy with this solution?"
+    }
+  ],
+  "shadowingTopic": "How to complain in English politely 或 Handling complaints in English customer service",
+  "impromptuTopic": "",
+  "impromptuCueWords": []
+}

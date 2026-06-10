@@ -4,9 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import { Send, User, Bot, Trash2, Mic, Square } from 'lucide-react';
 import { useChatStore } from '@/stores/chatStore';
 import { useSettingsStore } from '@/stores/settingsStore';
-import { saveChatConversation, getChatConversation } from '@/lib/storage/db';
+import { saveChatConversation } from '@/lib/storage/db';
 import { isSpeechRecognitionSupported, createSpeechRecognition } from '@/lib/speech/recognition';
 import { CHAT_SYSTEM_PROMPTS } from '@/lib/ai/prompts';
+import { streamChatDirect } from '@/lib/ai/direct';
+import type { AIConfig } from '@/lib/ai/direct';
 import type { ChatMessage, AIRole } from '@/types/chat';
 
 const ROLES: { id: AIRole; name: string; icon: string }[] = [
@@ -78,32 +80,14 @@ export default function ChatPage() {
 
     try {
       const allMessages = [...(conversations[activeRole]?.messages || []), userMsg];
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': apiKey,
-          'x-provider': provider,
-          'x-base-url': baseUrl,
-          'x-model': model,
-        },
-        body: JSON.stringify({
-          messages: allMessages.map((m) => ({ role: m.role, content: m.content })),
-          systemPrompt: CHAT_SYSTEM_PROMPTS[activeRole],
-          model,
-        }),
-      });
+      const aiConfig: AIConfig = {
+        provider,
+        apiKey,
+        baseUrl,
+        model,
+      };
 
-      if (!response.ok) {
-        const err = await response.json();
-        throw new Error(err.error || '请求失败');
-      }
-
-      const reader = response.body!.getReader();
-      const decoder = new TextDecoder();
       let fullContent = '';
-
-      // Create placeholder assistant message
       const assistantId = (Date.now() + 1).toString();
       addMessage(activeRole, {
         id: assistantId,
@@ -112,35 +96,27 @@ export default function ChatPage() {
         timestamp: Date.now(),
       });
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split('\n').filter((l) => l.startsWith('data: '));
-
-        for (const line of lines) {
-          try {
-            const data = JSON.parse(line.slice(6));
-            if (data.type === 'text_delta') {
-              fullContent += data.text;
-              // Update the last message
-              const conv = useChatStore.getState().conversations[activeRole];
-              if (conv) {
-                const msgs = [...conv.messages];
-                const lastIdx = msgs.length - 1;
-                if (lastIdx >= 0 && msgs[lastIdx].id === assistantId) {
-                  msgs[lastIdx] = { ...msgs[lastIdx], content: fullContent };
-                  loadConversations({
-                    ...useChatStore.getState().conversations,
-                    [activeRole]: { ...conv, messages: msgs },
-                  });
-                }
-              }
-            } else if (data.type === 'error') {
-              setError(data.message);
+      for await (const chunk of streamChatDirect(
+        allMessages.map((m) => ({ role: m.role, content: m.content })),
+        CHAT_SYSTEM_PROMPTS[activeRole],
+        aiConfig
+      )) {
+        if (chunk.type === 'text_delta') {
+          fullContent += chunk.text!;
+          const conv = useChatStore.getState().conversations[activeRole];
+          if (conv) {
+            const msgs = [...conv.messages];
+            const lastIdx = msgs.length - 1;
+            if (lastIdx >= 0 && msgs[lastIdx].id === assistantId) {
+              msgs[lastIdx] = { ...msgs[lastIdx], content: fullContent };
+              loadConversations({
+                ...useChatStore.getState().conversations,
+                [activeRole]: { ...conv, messages: msgs },
+              });
             }
-          } catch {}
+          }
+        } else if (chunk.type === 'error') {
+          setError(chunk.message || '请求失败');
         }
       }
 

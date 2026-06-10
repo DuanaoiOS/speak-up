@@ -1,0 +1,85 @@
+{
+  "week": 3,
+  "day": 4,
+  "title": "变化与转折",
+  "sentenceFrames": [
+    {
+      "pattern": "：I used to [old habit/belief], but now I [new behavior/perspective].",
+      "usage": "讲个人变化。*used to* 是口语中最常用的表达\"过去曾经\"的方式。",
+      "example": "I used to think being busy meant being important. But now I realize that being busy just means... being busy. It has nothing to do with doing meaningful work.",
+      "substitutions": [
+        "I used to **hate exercising**, but now I _____.",
+        "I used to **be afraid of speaking up in meetings**, but now I _____.",
+        "I used to **think success meant _____,** but now I think _____.",
+        "你的真实变化：I used to _____, but now I _____."
+      ]
+    },
+    {
+      "pattern": "：Everything changed when [specific event or realization].",
+      "usage": "点出改变的催化剂——那一件事或那个瞬间。",
+      "example": "Everything changed when my manager said to me, \"You're the quietest person in the room, but you have the best ideas. Why don't you share them?\" That hit me hard.",
+      "substitutions": [
+        "Everything changed when **I read this one book that said _____.",
+        "Everything changed when **I met someone who _____.",
+        "Everything changed when **I failed at _____ and realized _____.",
+        "你人生的转折点：Everything changed when _____."
+      ]
+    },
+    {
+      "pattern": "：Looking back, I realize [retrospective insight].",
+      "usage": "事后反思——\"当时不觉得，现在回头看才明白\"。",
+      "example": "Looking back, I realize that getting fired from that job was the best thing that ever happened to me. It forced me to figure out what I actually wanted.",
+      "substitutions": [
+        "Looking back, I realize **that decision I was so worried about didn't matter that much.",
+        "Looking back, I realize **my parents were right about _____.",
+        "Looking back, I realize **the hardest periods in my life were also the ones where I grew the most.",
+        "你的反思：Looking back, I realize _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "180 度大转变",
+      "english": "a complete 180 / a total turnaround"
+    },
+    {
+      "chinese": "转折点",
+      "english": "a turning point / a tipping point"
+    },
+    {
+      "chinese": "打开了我的眼界",
+      "english": "it opened my eyes / it was eye-opening"
+    },
+    {
+      "chinese": "彻底改变了我的人生轨迹",
+      "english": "it completely changed the course of my life"
+    },
+    {
+      "chinese": "从一个极端到另一个极端",
+      "english": "from one extreme to the other"
+    },
+    {
+      "chinese": "之前和之后的差别太大了",
+      "english": "the before and after is night and day"
+    },
+    {
+      "chinese": "我花了很多年才改掉这个习惯",
+      "english": "it took me years to break that habit"
+    },
+    {
+      "chinese": "老的我会...现在的我会...",
+      "english": "the old me would have... / now I'd..."
+    },
+    {
+      "chinese": "成长是不舒服的",
+      "english": "growth is uncomfortable"
+    },
+    {
+      "chinese": "不进则退",
+      "english": "if you're not growing, you're shrinking"
+    }
+  ],
+  "shadowingTopic": "How I changed my life English story 或 Before and after story English",
+  "impromptuTopic": "What's one big way you've changed in the last few years?",
+  "impromptuCueWords": []
+}

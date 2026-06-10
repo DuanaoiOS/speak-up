@@ -1,0 +1,84 @@
+{
+  "week": 4,
+  "day": 1,
+  "title": "电话与消息",
+  "sentenceFrames": [
+    {
+      "pattern": "：I'm calling about [the reason]. / Just following up on [previous topic].",
+      "usage": "打电话/语音的开场——一句话说清目的。",
+      "example": "Hey, I'm calling about the meeting next Tuesday. Just wanted to confirm the time.",
+      "substitutions": [
+        "I'm calling about **the reservation I made online. I want to...",
+        "I'm calling about **the job application I sent last week. I was wondering if...",
+        "Just following up on **that email I sent. Did you get a chance to...",
+        "你自己的场景：I'm calling about _____. / Just following up on _____."
+      ]
+    },
+    {
+      "pattern": "：Could you [request]? / Would it be possible to [polite request]?",
+      "usage": "电话中提请求。Could you 是日常用法，Would it be possible to 更正式。",
+      "example": "Could you send me the details by email? / Would it be possible to reschedule our call to Thursday?",
+      "substitutions": [
+        "Could you **repeat that? The line is a bit choppy.",
+        "Could you **put me through to the HR department?",
+        "Would it be possible to **get a refund?",
+        "Would it be possible to _____?"
+      ]
+    },
+    {
+      "pattern": "：Let me just [confirm / check / make sure I got this right]. So [summary].",
+      "usage": "确认你听懂了对方的意思。这是好电话沟通者的核心习惯。",
+      "example": "Let me just make sure I got this right. So you need the report by Friday noon, and it should include the Q2 numbers. Is that correct?",
+      "substitutions": [
+        "对方说了一个地址和见面时间 → Let me just confirm. So _____.",
+        "对方解释了一个问题的处理方式 → Let me make sure I got this right. So _____.",
+        "你自己的想法：你在电话中要怎么确认一个重要信息？"
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "信号不好",
+      "english": "the line is breaking up / you're cutting out"
+    },
+    {
+      "chinese": "我没听清",
+      "english": "I didn't quite catch that. / Could you say that again?"
+    },
+    {
+      "chinese": "我稍后回复你",
+      "english": "I'll get back to you on that."
+    },
+    {
+      "chinese": "长话短说（电话结束语）",
+      "english": "I'll let you go. / I know you're busy."
+    },
+    {
+      "chinese": "保持联系",
+      "english": "let's stay in touch / I'll keep you posted"
+    },
+    {
+      "chinese": "方便说话吗？",
+      "english": "is this a good time to talk? / did I catch you at a bad time?"
+    },
+    {
+      "chinese": "不好意思打扰了",
+      "english": "sorry to bother you / thanks for taking my call"
+    },
+    {
+      "chinese": "发个消息确认一下",
+      "english": "shoot me a message to confirm / I'll text you the details"
+    },
+    {
+      "chinese": "语音消息",
+      "english": "voice message / voice note"
+    },
+    {
+      "chinese": "我在开会，稍后打给你",
+      "english": "I'm in a meeting. Can I call you back?"
+    }
+  ],
+  "shadowingTopic": "Business phone call English conversation 或 How to make a phone call in English natural",
+  "impromptuTopic": "",
+  "impromptuCueWords": []
+}

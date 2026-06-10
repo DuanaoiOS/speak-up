@@ -1,0 +1,86 @@
+{
+  "week": 1,
+  "day": 4,
+  "title": "分享经历与见闻",
+  "sentenceFrames": [
+    {
+      "pattern": "：I remember this one time when [past situation].",
+      "usage": "要讲一个具体的经历了。\"One time\" 比 \"once\" 更口语化、更有故事感。",
+      "example": "I remember this one time when I got completely lost in Tokyo with no phone battery. It was terrifying but also kind of amazing.",
+      "substitutions": [
+        "I remember this one time when **I tried to cook for 10 people and...",
+        "I remember this one time when **I said the wrong thing in a meeting and...",
+        "I remember this one time when **I met someone completely unexpected and...",
+        "I remember this one time when **I traveled to _____ and...",
+        "I remember this one time when I _____."
+      ]
+    },
+    {
+      "pattern": "：So [situation], right? And then [what happened next].",
+      "usage": "讲故事时拉近跟听众的距离。\"right?\" 让听众参与进来。这是母语者讲故事的核心技巧。",
+      "example": "So I'm standing there, completely lost, right? And then this old lady comes up to me and starts speaking to me in Japanese, and I'm just nodding like I understand.",
+      "substitutions": [
+        "So I walk into the interview, super nervous, right? And then _____.",
+        "So we're on the plane, about to take off, right? And then _____.",
+        "So I decide to try cooking this new dish for the first time, right? And then _____.",
+        "用自己的经历续写：So _____, right? And then _____."
+      ]
+    },
+    {
+      "pattern": "：It turned out that [unexpected result].",
+      "usage": "讲故事的高潮——\"结果呢...\" 制造转折和意外感。",
+      "example": "It turned out that the lady wasn't speaking Japanese — she was speaking really fast Korean the whole time.",
+      "substitutions": [
+        "I thought I failed the test, but it turned out that _____.",
+        "I was worried about the presentation, but it turned out that _____.",
+        "I almost didn't go to that party, but it turned out that _____.",
+        "自己的经历：_____, but it turned out that _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "说来话长",
+      "english": "it's a long story"
+    },
+    {
+      "chinese": "长话短说",
+      "english": "to cut a long story short / long story short"
+    },
+    {
+      "chinese": "说来也奇怪",
+      "english": "oddly enough / strangely enough"
+    },
+    {
+      "chinese": "你猜怎么着",
+      "english": "and guess what?"
+    },
+    {
+      "chinese": "没想到的是",
+      "english": "little did I know... / to my surprise"
+    },
+    {
+      "chinese": "最妙的是",
+      "english": "the best part was..."
+    },
+    {
+      "chinese": "最糟的是",
+      "english": "the worst part was..."
+    },
+    {
+      "chinese": "那一刻我意识到",
+      "english": "that's when I realized"
+    },
+    {
+      "chinese": "我永远不会忘记",
+      "english": "I'll never forget..."
+    },
+    {
+      "chinese": "现在想想都觉得好笑",
+      "english": "looking back, it's actually pretty funny"
+    }
+  ],
+  "shadowingTopic": "Storytelling in English natural conversation 或 Tell an interesting story in English",
+  "impromptuTopic": "Tell a story about something unexpected that happened to you.",
+  "impromptuCueWords": []
+}

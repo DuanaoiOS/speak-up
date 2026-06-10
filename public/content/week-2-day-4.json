@@ -1,0 +1,85 @@
+{
+  "week": 2,
+  "day": 4,
+  "title": "推测与假设",
+  "sentenceFrames": [
+    {
+      "pattern": "：If I had to guess, I'd say [speculation].",
+      "usage": "没有确切答案时的推测。比 \"maybe\" 完整，比 \"I think\" 更谨慎。",
+      "example": "If I had to guess, I'd say most people spend about 3 hours a day on their phone without even realizing it.",
+      "substitutions": [
+        "关于未来 10 年的变化：If I had to guess, I'd say _____.",
+        "关于为什么很多人学不好英语：If I had to guess, I'd say _____.",
+        "关于你的朋友现在在做什么：If I had to guess, I'd say _____.",
+        "你的推测：If I had to guess, I'd say _____."
+      ]
+    },
+    {
+      "pattern": "：Chances are [likely outcome].",
+      "usage": "表达\"大概率会发生的事\"。比 \"probably\" 更地道。",
+      "example": "Chances are if you practice speaking every day for a month, you'll notice a huge difference.",
+      "substitutions": [
+        "Chances are **if you keep putting off practice, you'll never get better.",
+        "Chances are **the person you're talking to also feels nervous about speaking English.",
+        "Chances are **in 10 years, AI will _____ .",
+        "Chances are _____."
+      ]
+    },
+    {
+      "pattern": "：What if [hypothetical scenario]? [Imagine the implications].",
+      "usage": "提出一个假设，引发思考或讨论。",
+      "example": "What if we could learn languages as easily as uploading a file to our brain? Would we still value the process of learning, or would something be lost?",
+      "substitutions": [
+        "What if **humans could live to 150**? _____",
+        "What if **social media suddenly disappeared tomorrow**? _____",
+        "What if **you could only speak one language for the rest of your life**? _____",
+        "What if _____? _____"
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "很有可能",
+      "english": "it's highly likely that... / odds are..."
+    },
+    {
+      "chinese": "不太可能",
+      "english": "it's unlikely that... / fat chance"
+    },
+    {
+      "chinese": "我敢打赌",
+      "english": "I bet... / I'm willing to bet that..."
+    },
+    {
+      "chinese": "谁知道呢",
+      "english": "who knows? / your guess is as good as mine"
+    },
+    {
+      "chinese": "假设...的话",
+      "english": "let's say... / suppose... / assuming that..."
+    },
+    {
+      "chinese": "最好的情况/最坏的情况",
+      "english": "best-case scenario / worst-case scenario"
+    },
+    {
+      "chinese": "只是时间问题",
+      "english": "it's only a matter of time"
+    },
+    {
+      "chinese": "出乎意料",
+      "english": "against all odds / nobody saw that coming"
+    },
+    {
+      "chinese": "预感",
+      "english": "I have a hunch that... / gut feeling"
+    },
+    {
+      "chinese": "拭目以待",
+      "english": "we'll see / time will tell / let's wait and see"
+    }
+  ],
+  "shadowingTopic": "English conversation making predictions 或 Talking about the future in English",
+  "impromptuTopic": "What do you think the world will look like in 20 years?",
+  "impromptuCueWords": []
+}

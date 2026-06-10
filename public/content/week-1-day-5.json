@@ -1,0 +1,88 @@
+{
+  "week": 1,
+  "day": 5,
+  "title": "表达感受与看法",
+  "sentenceFrames": [
+    {
+      "pattern": "：To be honest, I [honest opinion / feeling].",
+      "usage": "说出真实的、可能跟别人不一样的想法。\"To be honest\" 是一个信号——接下来的话是真诚的。",
+      "example": "To be honest, I wasn't really that excited about it at first. But it grew on me.",
+      "substitutions": [
+        "To be honest, I **was a bit disappointed when...",
+        "To be honest, I **don't really get the hype about _____ (某个流行事物).",
+        "To be honest, I **was pretty nervous about speaking English before I started practicing.",
+        "To be honest, I **think _____ is overrated.",
+        "To be honest, I _____."
+      ]
+    },
+    {
+      "pattern": "：It feels like [comparison / metaphor].",
+      "usage": "用比喻来表达感受，比\"it makes me feel...\"生动得多。",
+      "example": "Speaking English for the first time feels like learning to walk again — you know what you want to do, but your body won't cooperate.",
+      "substitutions": [
+        "Starting a new job** feels like **being the new kid at school.",
+        "A long weekend** feels like **a mini vacation for your brain.",
+        "Trying to speak a new language** feels like _____.",
+        "Living in [your city]** feels like _____.",
+        "_____ feels like _____."
+      ]
+    },
+    {
+      "pattern": "：I can't help but feel that [opinion/feeling].",
+      "usage": "表达一种你\"忍不住这么觉得\"的看法。比 \"I think\" 有情感温度。",
+      "example": "I can't help but feel that we spend way too much time on our phones and not enough time actually talking to each other.",
+      "substitutions": [
+        "I can't help but feel that **time is passing faster every year.",
+        "I can't help but feel that **most meetings could have been emails.",
+        "I can't help but feel that _____.",
+        "I can't help but feel that _____.",
+        "I can't help but think that _____. (think 也可以替换 feel)"
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "说不上来为什么",
+      "english": "I can't put my finger on it / I can't quite explain it"
+    },
+    {
+      "chinese": "既兴奋又紧张",
+      "english": "a mix of excitement and nervousness"
+    },
+    {
+      "chinese": "让人又爱又恨",
+      "english": "it's a love-hate relationship"
+    },
+    {
+      "chinese": "超出预期",
+      "english": "exceeded my expectations"
+    },
+    {
+      "chinese": "让人失望",
+      "english": "it was a letdown / it fell short"
+    },
+    {
+      "chinese": "慢慢喜欢上了",
+      "english": "it grew on me"
+    },
+    {
+      "chinese": "让我很感动",
+      "english": "it really got to me / it hit home"
+    },
+    {
+      "chinese": "让我反思了很多",
+      "english": "it made me reflect on a lot of things"
+    },
+    {
+      "chinese": "有点不真实",
+      "english": "it felt surreal"
+    },
+    {
+      "chinese": "一言难尽",
+      "english": "it's hard to put into words"
+    }
+  ],
+  "shadowingTopic": "How to express feelings in English naturally 或 English conversation expressing opinions naturally",
+  "impromptuTopic": "How do you feel about the way you spend your time these days?",
+  "impromptuCueWords": []
+}

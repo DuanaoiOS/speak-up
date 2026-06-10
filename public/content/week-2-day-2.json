@@ -1,0 +1,85 @@
+{
+  "week": 2,
+  "day": 2,
+  "title": "解释与举例",
+  "sentenceFrames": [
+    {
+      "pattern": "：What I mean by that is [simpler explanation].",
+      "usage": "说完一个比较抽象的观点后，立刻用简单的话解释。这是好表达者的习惯。",
+      "example": "I think the education system is broken. What I mean by that is it was designed for a world that no longer exists — it teaches kids to memorize, not to think.",
+      "substitutions": [
+        "\"I think people should travel more.\" → What I mean by that is _____.",
+        "\"Social media is changing how we think.\" → What I mean by that is _____.",
+        "\"Work-life balance is a myth.\" → What I mean by that is _____.",
+        "\"English speaking is a different skill from English reading.\" → What I mean by that is _____."
+      ]
+    },
+    {
+      "pattern": "：A good example of this is [specific case].",
+      "usage": "用一个具体的例子支撑你的观点。具体的例子 > 抽象的道理。",
+      "example": "Most people overestimate what they can do in a day and underestimate what they can do in a year. A good example of this is learning a language — you won't see progress in one day, but after a year of daily practice, the difference is massive.",
+      "substitutions": [
+        "\"Technology makes life easier but also more complicated.\" → A good example of this is _____.",
+        "\"The best ideas often come from unexpected places.\" → A good example of this is _____.",
+        "\"Sometimes doing less is actually doing more.\" → A good example of this is _____.",
+        "你自己的观点：_____ → A good example of this is _____."
+      ]
+    },
+    {
+      "pattern": "：It's like [analogy] — [explain the connection].",
+      "usage": "用类比让复杂概念瞬间变清晰。好的类比比 10 分钟解释都管用。",
+      "example": "Passive vocabulary is like having a huge library in your head but no catalog — you know the books are there, but you can't find them when you need them.",
+      "substitutions": [
+        "\"Learning to speak a language is like **learning to drive — at first you think about every move, but eventually it becomes automatic.**\"",
+        "\"A good conversation is like **playing catch — you throw the ball, they catch it and throw it back.**\"",
+        "\"Social media algorithms are like _____.\"",
+        "你自己的类比：_____ is like _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "换句话说",
+      "english": "in other words / put it this way"
+    },
+    {
+      "chinese": "我的意思是",
+      "english": "my point is / what I'm trying to say is"
+    },
+    {
+      "chinese": "比如说",
+      "english": "for instance / say..."
+    },
+    {
+      "chinese": "以...为例",
+      "english": "take... for example"
+    },
+    {
+      "chinese": "这就像...",
+      "english": "it's kind of like..."
+    },
+    {
+      "chinese": "这样理解吧",
+      "english": "think of it this way"
+    },
+    {
+      "chinese": "简单来说",
+      "english": "simply put / in a nutshell"
+    },
+    {
+      "chinese": "证明了我的观点",
+      "english": "that proves my point / case in point"
+    },
+    {
+      "chinese": "数据/事实支持",
+      "english": "the numbers back this up"
+    },
+    {
+      "chinese": "一个典型的例子",
+      "english": "a classic example / a textbook case"
+    }
+  ],
+  "shadowingTopic": "How to explain clearly in English 或 TED Talk 3 minutes （找短篇 TED 演讲，观察讲者怎么用例子和类比）",
+  "impromptuTopic": "Is university education still worth it in 2026?",
+  "impromptuCueWords": []
+}

@@ -1,0 +1,82 @@
+{
+  "week": 4,
+  "day": 3,
+  "title": "面试",
+  "sentenceFrames": [
+    {
+      "pattern": "：My background is in [field], specifically [focus area]. What that means in practice is [real-world impact].",
+      "usage": "自我介绍。\"Tell me about yourself\" 的满分回答结构。",
+      "example": "My background is in marketing, specifically content strategy. What that means in practice is I help companies figure out what to say and how to say it so people actually want to listen.",
+      "substitutions": [
+        "My background is in _____, specifically _____. What that means in practice is _____.",
+        "I've spent the last _____ years working in _____. My main focus has been _____.",
+        "你的真实版本：My background is in _____. What that means in practice is _____."
+      ]
+    },
+    {
+      "pattern": "：One challenge I faced was [situation]. What I did was [action]. And the result was [outcome].",
+      "usage": "回答行为面试题（\"Tell me about a time you...\"）。这就是 STAR 法的口语版。",
+      "example": "One challenge I faced was that our team was consistently missing deadlines. What I did was set up a simple tracking system and a 10-minute daily check-in. The result was we hit every deadline for the next 6 months — and people actually liked the new process.",
+      "substitutions": [
+        "你解决的一个问题：One challenge I faced was _____. What I did was _____. The result was _____.",
+        "你跟别人合作有分歧：One challenge I faced was _____. What I did was _____. The result was _____.",
+        "你从失败中学到东西：One challenge I faced was _____. What I did was _____. The result was _____. (结果可以是失败，但你学到了什么）"
+      ]
+    },
+    {
+      "pattern": "：Where I see myself in [time frame] is [vision]. I'm particularly interested in [specific area] because [reason].",
+      "usage": "\"Where do you see yourself in 5 years?\" 不要给空洞的答案。",
+      "example": "Where I see myself in 5 years is leading a product team. I'm particularly interested in the intersection of technology and education because I've seen firsthand how much impact a well-designed product can have on how people learn.",
+      "substitutions": [
+        "Where I see myself in 3-5 years is _____. I'm particularly interested in _____ because _____.",
+        "I want to build expertise in _____ because I believe _____.",
+        "你的真实答案：Where I see myself in 5 years is _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "我有...年的经验",
+      "english": "I have [X] years of experience in..."
+    },
+    {
+      "chinese": "我最擅长的是...",
+      "english": "my strength is... / what I'm best at is..."
+    },
+    {
+      "chinese": "我还在提升的地方是...",
+      "english": "an area I'm working on is..."
+    },
+    {
+      "chinese": "我跟团队合作很顺畅",
+      "english": "I work well with cross-functional teams"
+    },
+    {
+      "chinese": "我主导过一个项目...",
+      "english": "I led a project where... / I took the initiative to..."
+    },
+    {
+      "chinese": "结果超出了预期",
+      "english": "the results exceeded expectations"
+    },
+    {
+      "chinese": "我对这个职位很感兴趣因为...",
+      "english": "I'm drawn to this role because..."
+    },
+    {
+      "chinese": "这个岗位跟我职业方向很契合",
+      "english": "this role aligns with where I want to take my career"
+    },
+    {
+      "chinese": "我看重持续成长",
+      "english": "I value continuous growth / I'm always looking to learn"
+    },
+    {
+      "chinese": "我能为团队带来什么",
+      "english": "what I bring to the table is..."
+    }
+  ],
+  "shadowingTopic": "Tell me about yourself interview answer English 或 STAR method interview English example",
+  "impromptuTopic": "",
+  "impromptuCueWords": []
+}

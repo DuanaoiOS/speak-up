@@ -1,0 +1,170 @@
+[
+  {
+    "week": 1,
+    "day": 1,
+    "title": "让自我介绍会聊天",
+    "filename": "week-1-day-1.json"
+  },
+  {
+    "week": 1,
+    "day": 2,
+    "title": "聊工作与学习",
+    "filename": "week-1-day-2.json"
+  },
+  {
+    "week": 1,
+    "day": 3,
+    "title": "聊兴趣与热情",
+    "filename": "week-1-day-3.json"
+  },
+  {
+    "week": 1,
+    "day": 4,
+    "title": "分享经历与见闻",
+    "filename": "week-1-day-4.json"
+  },
+  {
+    "week": 1,
+    "day": 5,
+    "title": "表达感受与看法",
+    "filename": "week-1-day-5.json"
+  },
+  {
+    "week": 1,
+    "day": 6,
+    "title": "速度挑战",
+    "filename": "week-1-day-6.json"
+  },
+  {
+    "week": 1,
+    "day": 7,
+    "title": "休息日",
+    "filename": "week-1-day-7.json"
+  },
+  {
+    "week": 2,
+    "day": 1,
+    "title": "同意与不同意",
+    "filename": "week-2-day-1.json"
+  },
+  {
+    "week": 2,
+    "day": 2,
+    "title": "解释与举例",
+    "filename": "week-2-day-2.json"
+  },
+  {
+    "week": 2,
+    "day": 3,
+    "title": "对比与比较",
+    "filename": "week-2-day-3.json"
+  },
+  {
+    "week": 2,
+    "day": 4,
+    "title": "推测与假设",
+    "filename": "week-2-day-4.json"
+  },
+  {
+    "week": 2,
+    "day": 5,
+    "title": "总结与结论",
+    "filename": "week-2-day-5.json"
+  },
+  {
+    "week": 2,
+    "day": 6,
+    "title": "观点表达 — 速度挑战",
+    "filename": "week-2-day-6.json"
+  },
+  {
+    "week": 2,
+    "day": 7,
+    "title": "休息日",
+    "filename": "week-2-day-7.json"
+  },
+  {
+    "week": 3,
+    "day": 1,
+    "title": "搭建场景",
+    "filename": "week-3-day-1.json"
+  },
+  {
+    "week": 3,
+    "day": 2,
+    "title": "时间顺序",
+    "filename": "week-3-day-2.json"
+  },
+  {
+    "week": 3,
+    "day": 3,
+    "title": "细节与感受",
+    "filename": "week-3-day-3.json"
+  },
+  {
+    "week": 3,
+    "day": 4,
+    "title": "变化与转折",
+    "filename": "week-3-day-4.json"
+  },
+  {
+    "week": 3,
+    "day": 5,
+    "title": "反思与收获",
+    "filename": "week-3-day-5.json"
+  },
+  {
+    "week": 3,
+    "day": 6,
+    "title": "故事叙述 — 速度挑战",
+    "filename": "week-3-day-6.json"
+  },
+  {
+    "week": 3,
+    "day": 7,
+    "title": "休息日",
+    "filename": "week-3-day-7.json"
+  },
+  {
+    "week": 4,
+    "day": 1,
+    "title": "电话与消息",
+    "filename": "week-4-day-1.json"
+  },
+  {
+    "week": 4,
+    "day": 2,
+    "title": "会议与讨论",
+    "filename": "week-4-day-2.json"
+  },
+  {
+    "week": 4,
+    "day": 3,
+    "title": "面试",
+    "filename": "week-4-day-3.json"
+  },
+  {
+    "week": 4,
+    "day": 4,
+    "title": "处理问题与投诉",
+    "filename": "week-4-day-4.json"
+  },
+  {
+    "week": 4,
+    "day": 5,
+    "title": "社交场合",
+    "filename": "week-4-day-5.json"
+  },
+  {
+    "week": 4,
+    "day": 6,
+    "title": "实战场景 — 速度挑战",
+    "filename": "week-4-day-6.json"
+  },
+  {
+    "week": 4,
+    "day": 7,
+    "title": "休息日 + 第一个月结业",
+    "filename": "week-4-day-7.json"
+  }
+]

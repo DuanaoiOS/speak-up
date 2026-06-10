@@ -1,0 +1,88 @@
+{
+  "week": 1,
+  "day": 3,
+  "title": "聊兴趣与热情",
+  "sentenceFrames": [
+    {
+      "pattern": "：I'm really into [something] — like, [elaborate].",
+      "usage": "表达热忱。\"really into\" 比 \"like\" 强烈，\"like\" 后面的补充让表达更自然。",
+      "example": "I'm really into photography — like, I'll spend hours editing a single photo and not even notice the time pass.",
+      "substitutions": [
+        "I'm really into **cooking** — like, _____.",
+        "I'm really into **fitness** — like, _____.",
+        "I'm really into **reading** — like, _____.",
+        "I'm really into **music** — like, _____.",
+        "I'm really into _____ — like, _____."
+      ]
+    },
+    {
+      "pattern": "：I got into [something] because [story/reason].",
+      "usage": "说出你怎么开始一个兴趣的——每件事都有个起点，这就是故事。",
+      "example": "I got into running because I missed my bus one day and had to run 3 kilometers to work. Turns out, I actually enjoyed it.",
+      "substitutions": [
+        "I got into **cooking** because _____.",
+        "I got into **my current hobby** because _____.",
+        "I got into **the work I do** because _____.",
+        "I got into **English** because _____.",
+        "I got into _____ because _____."
+      ]
+    },
+    {
+      "pattern": "：What I find [adj] about it is [observation].",
+      "usage": "不只是说\"我喜欢\"，而是说出\"为什么喜欢\"——这才是吸引人的部分。",
+      "example": "What I find fascinating about learning languages is how it changes the way you think — you literally start seeing the world differently.",
+      "substitutions": [
+        "What I find **interesting** about **social media** is _____.",
+        "What I find **frustrating** about **my phone** is _____.",
+        "What I find **rewarding** about **my hobby** is _____.",
+        "What I find **fascinating** about **human behavior** is _____.",
+        "What I find _____ about _____ is _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "沉迷于（某事物）",
+      "english": "be hooked on / be addicted to"
+    },
+    {
+      "chinese": "打发时间",
+      "english": "kill time"
+    },
+    {
+      "chinese": "值得花时间",
+      "english": "be worth the time"
+    },
+    {
+      "chinese": "一种释放压力的方式",
+      "english": "a way to unwind / blow off steam"
+    },
+    {
+      "chinese": "让我很投入",
+      "english": "it keeps me engaged / absorbed"
+    },
+    {
+      "chinese": "尝试新事物",
+      "english": "try new things / step out of my comfort zone"
+    },
+    {
+      "chinese": "半途而废",
+      "english": "give up halfway / not follow through"
+    },
+    {
+      "chinese": "一项技能",
+      "english": "pick up a skill"
+    },
+    {
+      "chinese": "乐此不疲",
+      "english": "never get tired of it"
+    },
+    {
+      "chinese": "志同道合的人",
+      "english": "like-minded people"
+    }
+  ],
+  "shadowingTopic": "Talk about your hobbies naturally in English 或 What are you passionate about English conversation",
+  "impromptuTopic": "What are you really into right now?",
+  "impromptuCueWords": []
+}

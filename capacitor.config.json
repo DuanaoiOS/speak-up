@@ -1,0 +1,9 @@
+{
+  "appId": "com.duanaoios.speakup",
+  "appName": "SpeakUp",
+  "webDir": "out",
+  "server": {
+    "iosScheme": "capacitor",
+    "androidScheme": "https"
+  }
+}

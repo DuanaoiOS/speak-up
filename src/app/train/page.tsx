@@ -14,10 +14,11 @@ export default function TrainHubPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/content')
+    fetch('/content/manifest.json')
       .then((r) => r.json())
       .then((data) => {
-        setDays(data.days || []);
+        const list = Array.isArray(data) ? data : (data.days || []);
+        setDays(list);
         setLoading(false);
       })
       .catch(() => setLoading(false));

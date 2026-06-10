@@ -1,0 +1,84 @@
+{
+  "week": 3,
+  "day": 5,
+  "title": "反思与收获",
+  "sentenceFrames": [
+    {
+      "pattern": "：What I took away from that experience was [lesson learned].",
+      "usage": "直接说出你从一件事中学到了什么。\"Takeaway\" 是口语里最常用的\"收获\"。",
+      "example": "What I took away from that whole mess was that you can't control what happens to you — you can only control how you respond.",
+      "substitutions": [
+        "从一次失败的经历**：What I took away from that experience was _____.",
+        "从一段关系中**：What I took away from that relationship was _____.",
+        "从学英语的过程中**：What I took away from learning English was _____.",
+        "你的真实收获：What I took away from _____ was _____."
+      ]
+    },
+    {
+      "pattern": "：If I could go back, I would [what you'd do differently]. Not because [reason], but because [deeper reason].",
+      "usage": "表达\"如果能重来\"——但不只是表面的后悔，而是更深层的反思。",
+      "example": "If I could go back, I would tell myself to speak up more. Not because my ideas were better than anyone else's, but because staying silent didn't protect me — it just made me invisible.",
+      "substitutions": [
+        "关于大学时期：If I could go back, I would _____. Not because _____, but because _____.",
+        "关于职业选择：If I could go back, I would _____. Not because _____, but because _____.",
+        "关于人际关系：If I could go back, I would _____. Not because _____, but because _____."
+      ]
+    },
+    {
+      "pattern": "：It taught me that [universal truth / personal principle].",
+      "usage": "故事结尾的\"升华\"——从具体的事件提炼出一个普遍的道理。",
+      "example": "It taught me that courage isn't the absence of fear — it's being terrified and doing it anyway.",
+      "substitutions": [
+        "一次旅行** 教会你：It taught me that _____.",
+        "一次失败** 教会你：It taught me that _____.",
+        "一个你不喜欢但必须做的事** 教会你：It taught me that _____.",
+        "你最近学到的一件事：It taught me that _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "这次经历让我学到了...",
+      "english": "the experience taught me... / I walked away with..."
+    },
+    {
+      "chinese": "事后看来",
+      "english": "in hindsight / in retrospect"
+    },
+    {
+      "chinese": "塞翁失马，焉知非福",
+      "english": "a blessing in disguise"
+    },
+    {
+      "chinese": "我不后悔，因为...",
+      "english": "I have no regrets because... / I wouldn't change a thing"
+    },
+    {
+      "chinese": "这些经历造就了今天的我",
+      "english": "those experiences made me who I am today"
+    },
+    {
+      "chinese": "每一步都算数",
+      "english": "every step counts / it all added up"
+    },
+    {
+      "chinese": "经过这件事我变得更...",
+      "english": "I came out of it more... / it made me more..."
+    },
+    {
+      "chinese": "这让我重新思考了...",
+      "english": "it made me rethink... / it changed my perspective on..."
+    },
+    {
+      "chinese": "我现在会告诉别人...",
+      "english": "now I tell people... / my advice would be..."
+    },
+    {
+      "chinese": "成长往往是不舒服的",
+      "english": "growth happens outside your comfort zone"
+    }
+  ],
+  "shadowingTopic": "What I learned from my biggest mistake 或 Life lesson story English",
+  "impromptuTopic": "Tell me about a mistake or failure that ended up teaching you something valuable.",
+  "impromptuCueWords": []
+}

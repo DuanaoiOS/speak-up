@@ -1,0 +1,86 @@
+{
+  "week": 2,
+  "day": 3,
+  "title": "对比与比较",
+  "sentenceFrames": [
+    {
+      "pattern": "：Compared to [A], [B] is [comparison].",
+      "usage": "直接对比两个事物，突出差异。比 \"A is... but B is...\" 更紧凑。",
+      "example": "Compared to 10 years ago, life today is way more convenient but also way more distracting.",
+      "substitutions": [
+        "Compared to **10 years ago**, life today is _____.",
+        "Compared to **reading English**, speaking English is _____.",
+        "Compared to **my parents' generation**, my generation is _____.",
+        "Compared to **small cities**, big cities are _____.",
+        "你自己的对比：Compared to _____, _____ is _____."
+      ]
+    },
+    {
+      "pattern": "：The main difference is [key point]. [A] is [adj], whereas [B] is [adj].",
+      "usage": "先点出核心差异，再并列对比。适合回答\"What's the difference?\"。",
+      "example": "The main difference is the pace of life. City life is fast-paced and stimulating, whereas country life is slow and peaceful.",
+      "substitutions": [
+        "远程工作 vs 办公室工作** → The main difference is _____. Working from home is _____, whereas working in an office is _____.",
+        "线上学习 vs 线下学习** → The main difference is _____. Online learning is _____, whereas in-person learning is _____.",
+        "年轻时的学习 vs 成年后的学习** → The main difference is _____. Learning as a kid is _____, whereas learning as an adult is _____.",
+        "你自己的对比：The main difference between _____ and _____ is _____."
+      ]
+    },
+    {
+      "pattern": "：They're similar in that [commonality], but [key difference].",
+      "usage": "先承认相似之处，再点出区别。比只说\"they're different\"更有洞察力。",
+      "example": "Reading and speaking are similar in that both require vocabulary and grammar, but speaking requires real-time retrieval — there's no time to look up a word mid-sentence.",
+      "substitutions": [
+        "Chinese and English** → They're similar in that _____, but _____.",
+        "Working and studying** → They're similar in that _____, but _____.",
+        "Movies and books** → They're similar in that _____, but _____.",
+        "你自己找一组对比：They're similar in that _____, but _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "天壤之别",
+      "english": "worlds apart / night and day"
+    },
+    {
+      "chinese": "差别不大",
+      "english": "there's not much in it / pretty much the same"
+    },
+    {
+      "chinese": "各有优劣",
+      "english": "each has its pros and cons"
+    },
+    {
+      "chinese": "本质上不同",
+      "english": "fundamentally different"
+    },
+    {
+      "chinese": "惊人的相似",
+      "english": "strikingly similar"
+    },
+    {
+      "chinese": "A 远胜于 B",
+      "english": "A is far superior to B / B doesn't even come close"
+    },
+    {
+      "chinese": "视情况而定",
+      "english": "it varies / it depends"
+    },
+    {
+      "chinese": "不能一概而论",
+      "english": "you can't generalize"
+    },
+    {
+      "chinese": "相比之下",
+      "english": "by comparison / in contrast"
+    },
+    {
+      "chinese": "越来越相似",
+      "english": "they're becoming more and more alike"
+    }
+  ],
+  "shadowingTopic": "Comparing and contrasting in English conversation 或 English compare and contrast essay speaking",
+  "impromptuTopic": "Compare your life now to your life 5 years ago. What's changed and what's stayed the same?",
+  "impromptuCueWords": []
+}

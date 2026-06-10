@@ -1,0 +1,85 @@
+{
+  "week": 3,
+  "day": 3,
+  "title": "细节与感受",
+  "sentenceFrames": [
+    {
+      "pattern": "：I remember feeling [emotion] because [reason]. I remember thinking, \"[direct thought]\".",
+      "usage": "把听众拉进你的内心世界。直接引语（你当时脑子里想的那句话）比间接描述有力得多。",
+      "example": "I remember feeling this wave of panic wash over me. I remember thinking, \"This is it. I've really done it this time.\"",
+      "substitutions": [
+        "关于一个紧张的时刻：I remember feeling _____. I remember thinking, \"_____.\"",
+        "关于一个惊喜的时刻：I remember feeling _____. I remember thinking, \"_____.\"",
+        "关于一个骄傲的时刻：I remember feeling _____. I remember thinking, \"_____.\"",
+        "你的真实经历：I remember feeling _____. I remember thinking, \"_____.\""
+      ]
+    },
+    {
+      "pattern": "：The [sensory detail] that struck me was [specific observation].",
+      "usage": "用一个感官细节让场景立体起来——视觉、听觉、嗅觉、触觉。",
+      "example": "The detail that struck me was how quiet the office was. No keyboards clicking, no phones ringing — just this eerie silence. You could hear someone coughing three floors away.",
+      "substitutions": [
+        "走进一个陌生的地方**：The thing that struck me was how _____.",
+        "见到一个很久没见的人**：The thing that struck me was how _____.",
+        "到一个新的城市**：The thing that struck me was the smell/sound/sight of _____.",
+        "你的经历：The thing that struck me was _____."
+      ]
+    },
+    {
+      "pattern": "：That's when I realized [insight or shift in understanding].",
+      "usage": "故事的\"顿悟时刻\"——一切从这里开始改变。",
+      "example": "That's when I realized I wasn't nervous about speaking English — I was nervous about sounding stupid. And those are two completely different things.",
+      "substitutions": [
+        "That's when I realized **this job wasn't for me.",
+        "That's when I realized **I had been worrying about the wrong thing all along.",
+        "That's when I realized **_____ wasn't the problem — _____ was the problem.",
+        "你的顿悟时刻：That's when I realized _____."
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "chinese": "脊背发凉",
+      "english": "a chill went down my spine"
+    },
+    {
+      "chinese": "心跳加速",
+      "english": "my heart was racing / pounding"
+    },
+    {
+      "chinese": "大脑一片空白",
+      "english": "my mind went blank"
+    },
+    {
+      "chinese": "松了一口气",
+      "english": "I felt a wave of relief / I breathed a sigh of relief"
+    },
+    {
+      "chinese": "五味杂陈",
+      "english": "it was bittersweet / I had mixed feelings"
+    },
+    {
+      "chinese": "没反应过来（愣住了）",
+      "english": "I froze / I was at a loss for words"
+    },
+    {
+      "chinese": "时间仿佛停止了",
+      "english": "it felt like time stood still"
+    },
+    {
+      "chinese": "有种说不上来的感觉",
+      "english": "I had this feeling I couldn't quite name"
+    },
+    {
+      "chinese": "既陌生又熟悉",
+      "english": "it felt foreign yet familiar"
+    },
+    {
+      "chinese": "一切都是值得的",
+      "english": "it was all worth it"
+    }
+  ],
+  "shadowingTopic": "The Moth emotional story 或 Personal story with feelings in English",
+  "impromptuTopic": "Tell me about a time you felt really proud of yourself.",
+  "impromptuCueWords": []
+}
