@@ -9,6 +9,48 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"SF Pro Text"',
+          '"PingFang SC"',
+          '"Hiragino Sans GB"',
+          '"Microsoft YaHei"',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+        ],
+        mono: [
+          '"SF Mono"',
+          '"Cascadia Code"',
+          '"Fira Code"',
+          'Menlo',
+          'Consolas',
+          'monospace',
+        ],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1.5' }],
+        'sm': ['0.875rem', { lineHeight: '1.6' }],
+        'base': ['1rem', { lineHeight: '1.7' }],
+        'lg': ['1.125rem', { lineHeight: '1.75' }],
+        'xl': ['1.25rem', { lineHeight: '1.75' }],
+        '2xl': ['1.5rem', { lineHeight: '1.4' }],
+        '3xl': ['1.875rem', { lineHeight: '1.3' }],
+        '4xl': ['2.25rem', { lineHeight: '1.2' }],
+      },
+      lineHeight: {
+        relaxed: '1.75',
+        loose: '2',
+      },
+      letterSpacing: {
+        wide: '0.02em',
+        wider: '0.05em',
+      },
       colors: {
         primary: {
           50: '#eff6ff',

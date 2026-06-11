@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Centered logo for launch screen — speech bubble + upward arrow -->
+  <g transform="translate(200, 180)">
+    <!-- Bubble -->
+    <rect x="-130" y="-110" width="260" height="190" rx="55" fill="white"/>
+    <!-- Tail -->
+    <path d="M-100,80 L-180,150 L-70,95 Z" fill="white"/>
+    <!-- Up arrow -->
+    <g transform="translate(0, -5)">
+      <line x1="0" y1="-40" x2="0" y2="50" stroke="#7C3AED" stroke-width="22" stroke-linecap="round"/>
+      <path d="M-35,-10 L0,-50 L35,-10" fill="none" stroke="#7C3AED" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

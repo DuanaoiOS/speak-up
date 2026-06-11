@@ -14,20 +14,90 @@
 
   .dark {
     --background: 15 23 42;
-    --foreground: 226 232 240;
+    --foreground: 241 245 249;
     --muted: 30 41 59;
     --muted-foreground: 148 163 184;
     --border: 51 65 85;
     --card: 30 41 59;
   }
 
+  html {
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
-    @apply bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-200;
+    @apply bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    font-feature-settings: "kern", "liga", "calt";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* — Typography — */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-slate-900 dark:text-slate-100;
+    text-wrap: balance;
+  }
+
+  h1 { @apply text-2xl; }
+  h2 { @apply text-xl; }
+  h3 { @apply text-lg; }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Reading content — stories, explanations */
+  .prose {
+    @apply leading-loose text-slate-700 dark:text-slate-300;
+    max-width: 65ch;
+  }
+
+  .prose p + p {
+    margin-top: 1em;
+  }
+
+  /* Story text readability */
+  .story-text {
+    @apply text-base leading-loose tracking-wide;
+    font-family: "Georgia", "Times New Roman", "PingFang SC", "Hiragino Sans GB", serif;
+  }
+
+  /* — Links — */
+  a {
+    @apply transition-colors duration-150;
+  }
+
+  /* — Selection — */
+  ::selection {
+    @apply bg-primary-200 text-primary-900 dark:bg-primary-800 dark:text-primary-100;
+  }
+
+  /* — Scrollbar — */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300 dark:bg-slate-600;
+  }
+
+  /* — Focus — */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Prevent iOS keyboard zoom — must be outside @layer for priority */
+input, textarea, select {
+  font-size: 16px !important;
 }

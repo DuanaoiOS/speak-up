@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MessageCircle, Dumbbell, BarChart3, Settings } from 'lucide-react';
+import { MessageCircle, Dumbbell, BarChart3, Settings, Brain } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
 const navItems = [
   { href: '/', label: '训练', icon: Dumbbell },
   { href: '/chat', label: '对话', icon: MessageCircle },
+  { href: '/review', label: '复习', icon: Brain },
   { href: '/progress', label: '数据', icon: BarChart3 },
   { href: '/settings', label: '设置', icon: Settings },
 ];

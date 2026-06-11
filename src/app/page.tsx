@@ -2,116 +2,168 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useProgressStore } from '@/stores/progressStore';
-import { getAllSessions } from '@/lib/storage/db';
-import { Dumbbell, MessageCircle, TrendingUp, Zap } from 'lucide-react';
+import { useStoryStore } from '@/stores/storyStore';
+import { useSettingsStore } from '@/stores/settingsStore';
+import { HONY_STORY_PROMPT } from '@/lib/ai/prompts';
+import { saveStory, getAllStories } from '@/lib/storage/db';
+import type { Story } from '@/types/story';
+import { BookOpen, Sparkles, ChevronRight, Languages, Brain, Library } from 'lucide-react';
+import type { AIConfig } from '@/lib/ai/direct';
 
-export default function DashboardPage() {
-  const { currentStreak, longestStreak, totalSessions, totalMinutes } = useProgressStore();
-  const [todayCompleted, setTodayCompleted] = useState(false);
-  const [loading, setLoading] = useState(true);
+export default function HomePage() {
+  const { stories, addStory, loading, setLoading } = useStoryStore();
+  const { provider, getActiveApiKey, getActiveBaseUrl, getActiveModel } = useSettingsStore();
+  const [generating, setGenerating] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    const today = new Date().toISOString().split('T')[0];
-    getAllSessions().then((sessions) => {
-      setTodayCompleted(sessions.some((s) => s.date === today));
-      setLoading(false);
-    });
+    loadStories();
   }, []);
 
+  async function loadStories() {
+    setLoading(true);
+    try {
+      const saved = await getAllStories();
+      if (saved.length > 0) {
+        useStoryStore.getState().setStories(saved);
+        setLoading(false);
+        return;
+      }
+      // First launch: import built-in stories
+      const { BUILTIN_STORIES } = await import('@/data/builtin-stories');
+      for (const story of BUILTIN_STORIES) {
+        await saveStory(story);
+        useStoryStore.getState().addStory(story);
+      }
+    } catch {}
+    setLoading(false);
+  }
+
+  async function generateStory() {
+    const apiKey = getActiveApiKey();
+    if (!apiKey) {
+      setError('请先在设置中配置 API Key');
+      return;
+    }
+
+    setGenerating(true);
+    setError('');
+
+    try {
+      const config: AIConfig = {
+        provider,
+        apiKey,
+        baseUrl: getActiveBaseUrl(),
+        model: getActiveModel(),
+      };
+
+      const { generateContentDirect } = await import('@/lib/ai/direct');
+      const raw = await generateContentDirect(HONY_STORY_PROMPT, 'Generate a new HONY-style story.', config);
+
+      // Extract JSON
+      const match = raw.match(/\{[\s\S]*\}/);
+      const data = match ? JSON.parse(match[0]) : null;
+      if (!data) throw new Error('Failed to parse story');
+
+      const story: Story = {
+        id: Date.now().toString(),
+        title: data.title || 'Untitled Story',
+        content: data.content || '',
+        source: data.source || 'AI-generated HONY style',
+        vocabulary: data.vocabulary || [],
+        patterns: data.patterns || [],
+        keywords: data.keywords || [],
+        quiz: data.quiz || [],
+        createdAt: Date.now(),
+      };
+
+      await saveStory(story);
+      addStory(story);
+    } catch (err) {
+      setError('生成失败，请重试');
+      console.error(err);
+    }
+    setGenerating(false);
+  }
+
   return (
-    <div className="space-y-8">
-      {/* Greeting + Streak */}
-      <section className="rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 p-6 text-white">
-        <h1 className="text-2xl font-bold">
-          {loading ? '加载中...' : todayCompleted ? '今日训练已完成！' : '准备好今天的训练了吗？'}
-        </h1>
-        <p className="mt-1 text-primary-100">
-          {currentStreak > 0
-            ? `已连续打卡 ${currentStreak} 天，最长 ${longestStreak} 天`
-            : '开始你的第一次训练吧'}
-        </p>
-        <div className="mt-4 flex gap-4">
-          <div className="rounded-lg bg-white/20 px-4 py-2 backdrop-blur">
-            <div className="text-2xl font-bold">{totalSessions}</div>
-            <div className="text-xs text-primary-100">总训练次数</div>
-          </div>
-          <div className="rounded-lg bg-white/20 px-4 py-2 backdrop-blur">
-            <div className="text-2xl font-bold">{Math.round(totalMinutes / 60)}h</div>
-            <div className="text-xs text-primary-100">总时长</div>
-          </div>
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold">SpeakUp</h1>
+          <p className="text-sm text-slate-500 dark:text-slate-400">Humans of New York 故事学英语</p>
         </div>
-      </section>
+      </div>
 
-      {/* Quick Actions */}
-      <section>
-        <h2 className="mb-3 font-semibold text-lg">快速开始</h2>
-        <div className="grid grid-cols-2 gap-3">
-          <Link
-            href="/train"
-            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
-              <Dumbbell className="h-5 w-5" />
-            </div>
-            <div>
-              <div className="font-medium">每日训练</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">5步口语激活</div>
-            </div>
-          </Link>
+      {/* Generate button */}
+      <button
+        onClick={generateStory}
+        disabled={generating}
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 p-4 text-white shadow-sm transition-transform active:scale-95 disabled:opacity-60"
+      >
+        {generating ? (
+          <>
+            <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+            AI 正在生成故事...
+          </>
+        ) : (
+          <>
+            <Sparkles className="h-5 w-5" />
+            获取新故事
+          </>
+        )}
+      </button>
 
-          <Link
-            href="/chat"
-            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
-              <MessageCircle className="h-5 w-5" />
-            </div>
-            <div>
-              <div className="font-medium">AI 对话</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">情景陪练</div>
-            </div>
-          </Link>
-
-          <Link
-            href="/train?mode=review"
-            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">
-              <Zap className="h-5 w-5" />
-            </div>
-            <div>
-              <div className="font-medium">快速复习</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">昨天的内容</div>
-            </div>
-          </Link>
-
-          <Link
-            href="/progress"
-            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
-          >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400">
-              <TrendingUp className="h-5 w-5" />
-            </div>
-            <div>
-              <div className="font-medium">学习数据</div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">追踪进步</div>
-            </div>
-          </Link>
+      {error && (
+        <div className="rounded-lg bg-red-50 px-4 py-2 text-sm text-red-600 dark:bg-red-900/20 dark:text-red-400">
+          {error}
         </div>
-      </section>
+      )}
 
-      {/* Prompt: Set API Key */}
-      {!todayCompleted && (
-        <section className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4 text-center dark:border-slate-600 dark:bg-slate-800/50">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            开始训练前，请先在
-            <Link href="/settings" className="mx-1 font-medium text-primary-600 underline">
-              设置
+      {/* Story list */}
+      {loading ? (
+        <div className="flex justify-center py-12">
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary-200 border-t-primary-600" />
+        </div>
+      ) : stories.length === 0 ? (
+        <div className="py-16 text-center">
+          <Library className="mx-auto h-12 w-12 text-slate-300 dark:text-slate-600" />
+          <p className="mt-4 text-slate-500 dark:text-slate-400">还没有故事</p>
+          <p className="text-sm text-slate-400 dark:text-slate-500">点击上方按钮，AI 为你生成第一个故事</p>
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {stories.map((story) => (
+            <Link
+              key={story.id}
+              href={`/story?id=${story.id}`}
+              className="block rounded-xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
+            >
+              <h3 className="font-semibold text-lg">{story.title}</h3>
+              <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">
+                {story.content.slice(0, 120)}...
+              </p>
+              <div className="mt-3 flex items-center gap-3 text-xs text-slate-400 dark:text-slate-500">
+                <span className="flex items-center gap-1">
+                  <BookOpen className="h-3 w-3" />
+                  {story.vocabulary.length} 词
+                </span>
+                <span className="flex items-center gap-1">
+                  <Languages className="h-3 w-3" />
+                  {story.patterns.length} 句型
+                </span>
+                <span className="flex items-center gap-1">
+                  <Brain className="h-3 w-3" />
+                  {story.quiz.length} 题
+                </span>
+                <span className="ml-auto flex items-center gap-1 text-primary-500">
+                  开始 <ChevronRight className="h-3 w-3" />
+                </span>
+              </div>
             </Link>
-            中配置你的 API Key，以使用 AI 生成内容和对话陪练功能。
-          </p>
-        </section>
+          ))}
+        </div>
       )}
     </div>
   );

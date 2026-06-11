@@ -47,5 +47,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>SpeakUp needs microphone access for voice recording and speech practice.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>SpeakUp uses speech recognition to convert your voice to text for English speaking practice.</string>
 </dict>
 </plist>

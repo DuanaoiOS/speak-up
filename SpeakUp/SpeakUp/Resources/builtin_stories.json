@@ -1,0 +1,1326 @@
+[
+  {
+    "title": "Adoption",
+    "content": "\"This may be the happiest I've ever been to write a post. Last year, as many of you probably remember, we held a crowdfunding campaign to help a family with adoption fees. The Watkins family had already adopted an eight year old daughter from Ethiopia.\n\nThey were so happy with their new family, they decided to adopt a ten year old boy named Rabuma, who they had discovered in an orphanage. They knew that Rabuma was destined to be their new son, but were heartbroken because they didn't have the money to bring him home yet. 4,000 of you donated to help make this family a reality. Over the past year, the Watkins have been sending me periodic updates, but I didn't want to share them because I didn't want to jeopardize the process. But everything just finalized. By a beautiful coincidence, the Watkins happened to pick up Rabuma while I was in Africa. So between destinations, I took a two hour detour to Ethiopia to photograph the occasion. It was such an honor for me to be present at the birth of this new family. The love that had already developed between them just filled the room.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "crowdfunding",
+        "context": "we held a crowdfunding campaign",
+        "definition": "众筹",
+        "exampleSentence": "The community held a crowdfunding campaign to rebuild the playground."
+      },
+      {
+        "word": "adoption",
+        "context": "help a family with adoption fees",
+        "definition": "收养",
+        "exampleSentence": "They completed the adoption process last month."
+      },
+      {
+        "word": "orphanage",
+        "context": "discovered in an orphanage",
+        "definition": "孤儿院",
+        "exampleSentence": "He spent his childhood in an orphanage."
+      },
+      {
+        "word": "destined",
+        "context": "Rabuma was destined to be their new son",
+        "definition": "注定的",
+        "exampleSentence": "They were destined to meet each other."
+      },
+      {
+        "word": "periodic updates",
+        "context": "sending me periodic updates",
+        "definition": "定期更新",
+        "exampleSentence": "The team provides periodic updates on the project."
+      },
+      {
+        "word": "jeopardize",
+        "context": "didn't want to jeopardize the process",
+        "definition": "危及，破坏",
+        "exampleSentence": "Don't jeopardize your career for a short-term gain."
+      },
+      {
+        "word": "detour",
+        "context": "took a two hour detour to Ethiopia",
+        "definition": "绕道，绕路",
+        "exampleSentence": "We took a detour to visit the old town on our way back."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "hold a crowdfunding campaign",
+        "fromStory": "we held a crowdfunding campaign to help a family",
+        "explanation": "发起众筹活动。hold + campaign 是常见搭配。",
+        "practicePrompts": [
+          "描述一次社区募资活动",
+          "你参与过的筹款"
+        ]
+      },
+      {
+        "pattern": "be destined to",
+        "fromStory": "Rabuma was destined to be their new son",
+        "explanation": "注定要做/成为...。表达一种命运般的必然性。",
+        "practicePrompts": [
+          "你觉得你注定要做什么",
+          "两个人注定相遇的故事"
+        ]
+      }
+    ],
+    "keywords": [
+      "happiest",
+      "crowdfunding campaign",
+      "adoption",
+      "Ethiopia",
+      "Rabuma",
+      "orphanage",
+      "destined",
+      "heartbroken",
+      "4,000 donated",
+      "periodic updates",
+      "beautiful coincidence",
+      "detour",
+      "honor",
+      "birth of a new family"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "What country was the adopted daughter from?",
+        "options": [
+          "Kenya",
+          "Ethiopia",
+          "Nigeria",
+          "South Africa"
+        ],
+        "correctIndex": 1,
+        "explanation": "他们已经从埃塞俄比亚收养了一个8岁的女儿。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"destined\" mean?",
+        "options": [
+          "注定的",
+          "偶然的",
+          "选择的",
+          "被迫的"
+        ],
+        "correctIndex": 0,
+        "explanation": "destined = 命中注定的。"
+      },
+      {
+        "type": "comprehension",
+        "question": "How many people donated to the campaign?",
+        "options": [
+          "400",
+          "1,000",
+          "4,000",
+          "40,000"
+        ],
+        "correctIndex": 2,
+        "explanation": "4,000人捐款帮助这个家庭。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "Brandon took a _____ detour to photograph the occasion.",
+        "options": [
+          "one hour",
+          "two hour",
+          "three hour",
+          "four hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "他在行程之间绕了两小时路去拍照。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"jeopardize\" mean?",
+        "options": [
+          "加速",
+          "危及/破坏",
+          "保护",
+          "忽视"
+        ],
+        "correctIndex": 1,
+        "explanation": "jeopardize = 使处于危险中，危及。"
+      }
+    ]
+  },
+  {
+    "title": "Into Music",
+    "content": "\"Before medical school I was really into music. I'd work really hard on some songs, and post them on YouTube, and sometimes they'd get a few thousand views. There was a girl I used to collaborate with. We did a few covers together. But I went to medical school, and she skipped college and focused on music full time. Anyway, she's doing great now. All her songs get hundreds of thousands of views, and she just got back from a tour in Asia, and is talking with some major record labels. The funny thing is, she stopped in New York a while back, and we met up and recorded a cover together, just for old times' sake. We just threw it together really quickly, but because of who she is now, that song got more views than the combined total of everything else I ever worked on. It's funny how things work out.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "collaborate",
+        "context": "a girl I used to collaborate with",
+        "definition": "合作，协作",
+        "exampleSentence": "We collaborated on a project together."
+      },
+      {
+        "word": "covers",
+        "context": "We did a few covers together.",
+        "definition": "翻唱（歌曲）",
+        "exampleSentence": "Her cover of that song went viral."
+      },
+      {
+        "word": "focused on",
+        "context": "she skipped college and focused on music",
+        "definition": "专注于",
+        "exampleSentence": "He quit his job to focus on writing full time."
+      },
+      {
+        "word": "major record labels",
+        "context": "talking with some major record labels",
+        "definition": "大唱片公司",
+        "exampleSentence": "She got signed by a major record label."
+      },
+      {
+        "word": "old times' sake",
+        "context": "just for old times' sake",
+        "definition": "看在旧情的份上，怀旧",
+        "exampleSentence": "Let's meet up for coffee, for old times' sake."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "be really into [something]",
+        "fromStory": "I was really into music",
+        "explanation": "非常喜欢/沉迷于某事。比like更强烈的表达。",
+        "practicePrompts": [
+          "你年轻时钟爱的事",
+          "你现在的爱好"
+        ]
+      },
+      {
+        "pattern": "It's funny how things work out.",
+        "fromStory": "It's funny how things work out.",
+        "explanation": "\"事情的结果很有意思\"——对命运转折的一种感慨。",
+        "practicePrompts": [
+          "一个意想不到的人生转折",
+          "你生活中的巧合"
+        ]
+      }
+    ],
+    "keywords": [
+      "medical school",
+      "really into music",
+      "YouTube",
+      "collaborate",
+      "covers",
+      "skipped college",
+      "full time",
+      "tour in Asia",
+      "record labels",
+      "old times' sake",
+      "threw it together",
+      "more views",
+      "funny how things work out"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "What did the narrator go to school for?",
+        "options": [
+          "Music",
+          "Medicine",
+          "Law",
+          "Engineering"
+        ],
+        "correctIndex": 1,
+        "explanation": "他去了医学院。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"covers\" mean in this context?",
+        "options": [
+          "封面",
+          "翻唱",
+          "覆盖",
+          "掩护"
+        ],
+        "correctIndex": 1,
+        "explanation": "covers = 翻唱别人的歌曲。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "They recorded a cover together just for _____.",
+        "options": [
+          "fun",
+          "old times' sake",
+          "money",
+          "practice"
+        ],
+        "correctIndex": 1,
+        "explanation": "for old times' sake = 为了怀旧。"
+      },
+      {
+        "type": "comprehension",
+        "question": "How did the girl's career turn out?",
+        "options": [
+          "She quit music",
+          "She became very successful",
+          "She went to medical school too",
+          "She became a teacher"
+        ],
+        "correctIndex": 1,
+        "explanation": "她现在每首歌都有数十万观看，刚结束亚洲巡演。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"collaborate\" mean?",
+        "options": [
+          "竞争",
+          "合作",
+          "学习",
+          "旅行"
+        ],
+        "correctIndex": 1,
+        "explanation": "collaborate = 合作，共同创作。"
+      }
+    ]
+  },
+  {
+    "title": "Happiest Moments",
+    "content": "\"My happiest moments were way back in childhood. Everything was magical back then. All children are in a constant state of awe and everything is fantastic to them, but then the magical feeling dissipates and reality creeps in. I can strongly remember sitting in my living room in the 60's, as a kid, watching the television, and crying because I was seeing all those peaceful protesters getting sprayed with water hoses. When was the last time you felt that magical feeling? Ha! Not since I've been an adult, that's for sure. I mean, I've felt happy. I've fallen in love. I've loved my friends and family. I've got a grandkid now. But I wouldn't describe any of that as a magical feeling. You feel happy for a bit. You see your grandkid be born, and you're like: 'That's great! A grandkid!' But pretty soon you start thinking about how messed up the world is and what your grandkid's life is going to be like, and that feeling dissipates pretty fast.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "magical",
+        "context": "Everything was magical back then.",
+        "definition": "神奇的，有魔力的",
+        "exampleSentence": "Christmas felt magical when I was a child."
+      },
+      {
+        "word": "constant state of awe",
+        "context": "in a constant state of awe",
+        "definition": "持续的敬畏/惊叹状态",
+        "exampleSentence": "Kids live in a constant state of awe."
+      },
+      {
+        "word": "dissipates",
+        "context": "the magical feeling dissipates",
+        "definition": "消散，消失",
+        "exampleSentence": "The fog dissipated as the sun rose."
+      },
+      {
+        "word": "creeps in",
+        "context": "reality creeps in",
+        "definition": "悄悄进入，不知不觉地出现",
+        "exampleSentence": "Doubt started to creep in as the deadline approached."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "way back in [time]",
+        "fromStory": "way back in childhood",
+        "explanation": "在很久以前的某个时期。强调时间久远。",
+        "practicePrompts": [
+          "你最久远的记忆",
+          "很久以前的一件事"
+        ]
+      },
+      {
+        "pattern": "I wouldn't describe [X] as [Y].",
+        "fromStory": "I wouldn't describe any of that as a magical feeling.",
+        "explanation": "我不会把X称为Y。用于精确区分不同层次的情感/体验。",
+        "practicePrompts": [
+          "区分表面的快乐和深层的幸福",
+          "什么经历是你不会称之为成功的"
+        ]
+      }
+    ],
+    "keywords": [
+      "happiest moments",
+      "childhood",
+      "magical",
+      "constant state of awe",
+      "dissipates",
+      "reality creeps in",
+      "60's",
+      "protesters",
+      "water hoses",
+      "adult",
+      "grandkid",
+      "messed up world",
+      "dissipates fast"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "When were his happiest moments?",
+        "options": [
+          "Adulthood",
+          "Childhood",
+          "College years",
+          "After having kids"
+        ],
+        "correctIndex": 1,
+        "explanation": "他说最快乐的时光在童年。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"dissipates\" mean?",
+        "options": [
+          "增强",
+          "消散/消失",
+          "改变",
+          "增长"
+        ],
+        "correctIndex": 1,
+        "explanation": "dissipate = 逐渐消散。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "Children live in a constant state of _____.",
+        "options": [
+          "fear",
+          "awe",
+          "confusion",
+          "anger"
+        ],
+        "correctIndex": 1,
+        "explanation": "awe = 惊叹/敬畏。孩子对一切都感到神奇。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What made him cry as a child?",
+        "options": [
+          "A movie",
+          "Seeing peaceful protesters being sprayed with water hoses",
+          "A family argument",
+          "Losing a toy"
+        ],
+        "correctIndex": 1,
+        "explanation": "60年代在电视上看到和平抗议者被高压水枪喷。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"creeps in\" mean?",
+        "options": [
+          "跳进来",
+          "悄悄进入/不知不觉出现",
+          "冲进来",
+          "走进来"
+        ],
+        "correctIndex": 1,
+        "explanation": "creep in = 悄悄地、不知不觉地进入。"
+      }
+    ]
+  },
+  {
+    "title": "Divorce: Transforming Priorities",
+    "content": "\"I was worried the divorce was going to destroy my relationship with my children, but it actually ended up improving it. Before the divorce, I was a working father. Work always took priority. I knew that if I had to skip a soccer game for a work meeting, my wife would be able to take the kids to the game. After the divorce, I only got to see my kids every Tuesday night, every other Monday, and every other weekend. It completely changed my mindset — I went from being a working father to being a parent. If there was a work obligation during my time with the kids, I had to change it. I couldn't spend weekend mornings at the gym anymore, because that would cut into my time. I began cooking dinner on my nights so we could all eat together. The time restraints that the divorce put on me caused me to completely realign my priorities.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "divorce",
+        "context": "worried the divorce was going to destroy",
+        "definition": "离婚",
+        "exampleSentence": "They went through a difficult divorce."
+      },
+      {
+        "word": "mindset",
+        "context": "It completely changed my mindset",
+        "definition": "思维模式，心态",
+        "exampleSentence": "You need to change your mindset to succeed."
+      },
+      {
+        "word": "obligation",
+        "context": "a work obligation during my time with the kids",
+        "definition": "义务，责任",
+        "exampleSentence": "Family obligations come before work."
+      },
+      {
+        "word": "cut into",
+        "context": "that would cut into my time",
+        "definition": "占用，削减（时间）",
+        "exampleSentence": "Commuting cuts into my free time."
+      },
+      {
+        "word": "realign",
+        "context": "completely realign my priorities",
+        "definition": "重新调整，重新排列",
+        "exampleSentence": "The experience made me realign my life goals."
+      },
+      {
+        "word": "restraint",
+        "context": "The time restraints that the divorce put on me",
+        "definition": "限制，约束",
+        "exampleSentence": "Budget restraints forced us to scale back."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "go from being [X] to being [Y]",
+        "fromStory": "went from being a working father to being a parent",
+        "explanation": "从X变成Y。强调身份的转变。",
+        "practicePrompts": [
+          "你人生中的重大身份转变",
+          "从学生到职场人的变化"
+        ]
+      },
+      {
+        "pattern": "end up [doing]",
+        "fromStory": "it actually ended up improving it",
+        "explanation": "结果却...（表示出乎意料的结果）",
+        "practicePrompts": [
+          "一个出乎意料的好结果",
+          "以为会变糟却变好的事"
+        ]
+      }
+    ],
+    "keywords": [
+      "divorce",
+      "destroy relationship",
+      "ended up improving",
+      "working father",
+      "priority",
+      "soccer game",
+      "Tuesday night",
+      "every other weekend",
+      "changed mindset",
+      "parent",
+      "obligation",
+      "cut into",
+      "cooking dinner",
+      "time restraints",
+      "realign priorities"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "How did the divorce affect his relationship with his kids?",
+        "options": [
+          "It destroyed it",
+          "It improved it",
+          "It didn't change anything",
+          "He lost custody"
+        ],
+        "correctIndex": 1,
+        "explanation": "他说离婚反而改善了父子关系。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"mindset\" mean?",
+        "options": [
+          "大脑",
+          "思维模式/心态",
+          "记忆",
+          "智力"
+        ],
+        "correctIndex": 1,
+        "explanation": "mindset = 心态，思维方式。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "He went from being a working father to being a _____.",
+        "options": [
+          "husband",
+          "parent",
+          "friend",
+          "stranger"
+        ],
+        "correctIndex": 1,
+        "explanation": "从工作的父亲变成了真正的家长。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What did he start doing on his nights with the kids?",
+        "options": [
+          "Going to the gym",
+          "Cooking dinner",
+          "Working late",
+          "Watching TV"
+        ],
+        "correctIndex": 1,
+        "explanation": "他开始在属于他的晚上做饭，大家一起吃。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"realign\" mean?",
+        "options": [
+          "保持",
+          "重新调整",
+          "忽视",
+          "增加"
+        ],
+        "correctIndex": 1,
+        "explanation": "realign = 重新排列/调整优先级。"
+      }
+    ]
+  },
+  {
+    "title": "Adolescence",
+    "content": "\"Your brain is growing at a rapid rate during adolescence. There's a lot of emotion, confusion, thrill seeking. It's a time when you try a lot of things and make a lot of mistakes. We all went through it. But in this neighborhood, there's not a lot of maneuverability. There's not a lot of room for teens to make mistakes, and the mistakes have higher consequences. To make things worse, adolescence seems to be prolonged here. Many young people in the community view adolescence as a pinnacle, and not a stage. Girls become mothers at a young age. Fathers are absent, so young boys are forced to act like men. So what you have are adolescents who become authority figures, and spread the adolescent mindset through the community. Instead of thinking through a conflict, young men feel a social pressure to immediately react, so they don't appear 'soft' or 'weak.' That's one of the reasons I feel that mentorship programs are so important. They give adolescents a space to remain adolescents.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "adolescence",
+        "context": "brain is growing at a rapid rate during adolescence",
+        "definition": "青春期",
+        "exampleSentence": "Adolescence is a challenging time for many teenagers."
+      },
+      {
+        "word": "maneuverability",
+        "context": "there's not a lot of maneuverability",
+        "definition": "回旋余地，操作空间",
+        "exampleSentence": "Kids in tough neighborhoods have less maneuverability to make mistakes."
+      },
+      {
+        "word": "prolonged",
+        "context": "adolescence seems to be prolonged",
+        "definition": "被延长的",
+        "exampleSentence": "The illness prolonged his recovery."
+      },
+      {
+        "word": "pinnacle",
+        "context": "view adolescence as a pinnacle",
+        "definition": "顶峰，巅峰",
+        "exampleSentence": "He reached the pinnacle of his career at 40."
+      },
+      {
+        "word": "mentorship",
+        "context": "mentorship programs are so important",
+        "definition": "导师制，指导关系",
+        "exampleSentence": "The company offers mentorship programs for new employees."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "To make things worse, [situation].",
+        "fromStory": "To make things worse, adolescence seems to be prolonged here.",
+        "explanation": "\"更糟的是...\"。用于叠加负面情况。",
+        "practicePrompts": [
+          "描述一个越来越糟糕的情况",
+          "一个雪上加霜的故事"
+        ]
+      },
+      {
+        "pattern": "Instead of [doing X], [they do Y].",
+        "fromStory": "Instead of thinking through a conflict, young men feel a social pressure to immediately react.",
+        "explanation": "对比\"应该做的\"和\"实际做的\"。",
+        "practicePrompts": [
+          "描述一个社会压力现象",
+          "什么情况下你做了不该做的选择"
+        ]
+      }
+    ],
+    "keywords": [
+      "brain",
+      "adolescence",
+      "emotion",
+      "confusion",
+      "thrill seeking",
+      "maneuverability",
+      "consequences",
+      "prolonged",
+      "pinnacle",
+      "authority figures",
+      "social pressure",
+      "soft",
+      "weak",
+      "mentorship"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "What happens to adolescence in this neighborhood?",
+        "options": [
+          "It's shorter",
+          "It's prolonged",
+          "It doesn't exist",
+          "It's celebrated"
+        ],
+        "correctIndex": 1,
+        "explanation": "青春期在这里被延长了。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"pinnacle\" mean?",
+        "options": [
+          "阶段",
+          "顶峰",
+          "问题",
+          "开始"
+        ],
+        "correctIndex": 1,
+        "explanation": "pinnacle = 顶峰。社区里的年轻人把青春期看作人生巅峰而不是一个阶段。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "Young men feel pressure to react immediately so they don't appear _____.",
+        "options": [
+          "smart",
+          "soft or weak",
+          "old",
+          "rich"
+        ],
+        "correctIndex": 1,
+        "explanation": "他们不想表现软弱。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What does the narrator think is important for adolescents?",
+        "options": [
+          "More school",
+          "Mentorship programs",
+          "Sports",
+          "Better food"
+        ],
+        "correctIndex": 1,
+        "explanation": "他说导师计划给青少年一个继续做青少年的空间。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"maneuverability\" mean?",
+        "options": [
+          "速度",
+          "回旋余地/操作空间",
+          "力量",
+          "灵活性"
+        ],
+        "correctIndex": 1,
+        "explanation": "maneuverability = 犯错和调整的空间。"
+      }
+    ]
+  },
+  {
+    "title": "Bucket Lists",
+    "content": "\"I've got one of those bucket lists. I want to drive a race car. I wanted to join the Air Force, but that was just so I could jump out of an airplane, with a parachute — but not from too high though. Just medium high. I also want to go up in a balloon, because that looks fun. And also I want to do that thing where you're holding onto that kite-looking-thing while it goes through the air. Then I want to catch one of those big fish with the thing coming out of its nose, where they have to strap you to a chair so you can reel it in. My friend says I'm too old for that, but I think I can do it.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "bucket list",
+        "context": "I've got one of those bucket lists.",
+        "definition": "人生愿望清单（死前想做的事）",
+        "exampleSentence": "Skydiving is on my bucket list."
+      },
+      {
+        "word": "parachute",
+        "context": "jump out of an airplane, with a parachute",
+        "definition": "降落伞",
+        "exampleSentence": "The parachute opened smoothly."
+      },
+      {
+        "word": "strap",
+        "context": "they have to strap you to a chair",
+        "definition": "用带子绑住",
+        "exampleSentence": "Make sure to strap the baby into the car seat."
+      },
+      {
+        "word": "reel it in",
+        "context": "strap you to a chair so you can reel it in",
+        "definition": "收线（把鱼拉回来）",
+        "exampleSentence": "It took him ten minutes to reel in the big fish."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "I've got one of those [lists/things].",
+        "fromStory": "I've got one of those bucket lists.",
+        "explanation": "\"我有那么一个...\"——轻描淡写地引入话题。",
+        "practicePrompts": [
+          "你的愿望清单",
+          "你一直想做但还没做的事"
+        ]
+      }
+    ],
+    "keywords": [
+      "bucket list",
+      "race car",
+      "Air Force",
+      "parachute",
+      "medium high",
+      "balloon",
+      "kite-looking-thing",
+      "big fish",
+      "strap to chair",
+      "reel it in",
+      "too old",
+      "can do it"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "Why did he want to join the Air Force?",
+        "options": [
+          "To serve his country",
+          "To jump out of an airplane with a parachute",
+          "To fly planes",
+          "To get a free education"
+        ],
+        "correctIndex": 1,
+        "explanation": "他只是为了跳伞才想加入空军。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What is a \"bucket list\"?",
+        "options": [
+          "购物清单",
+          "人生愿望清单",
+          "工作任务",
+          "旅行计划"
+        ],
+        "correctIndex": 1,
+        "explanation": "bucket list = 死前想完成的事。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "He wants to jump from _____ high.",
+        "options": [
+          "very",
+          "medium",
+          "extremely",
+          "not"
+        ],
+        "correctIndex": 1,
+        "explanation": "他说\"不要太高，中等高就行\"。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What does his friend say about his bucket list?",
+        "options": [
+          "It's great",
+          "He's too old",
+          "It's too dangerous",
+          "He should add more"
+        ],
+        "correctIndex": 1,
+        "explanation": "朋友说他太老了，但他觉得自己可以。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"reel it in\" mean?",
+        "options": [
+          "扔掉",
+          "收线/拉回来",
+          "放线",
+          "绕线"
+        ],
+        "correctIndex": 1,
+        "explanation": "reel in = 收鱼线把鱼拉回来。"
+      }
+    ]
+  },
+  {
+    "title": "Regret — Family",
+    "content": "\"What do you feel most guilty about in life? Well, life's not over yet. But as of now, I don't have anything saved up to leave behind for my family. And I wish I did. I stayed at home with my two daughters when they were growing up. They turned out great, so I'm happy with that. They're such awesome girls. If they were here right now, you would love them. But I was home with them for ten years. And they were at school every day from 8:30 to 4:30. I'm thinking that maybe if I had used that time more productively, I'd have something to leave them. I had my real estate license, so I could have been looking for business or networking with other brokers. Instead I usually came home and played guitar, or tried to write a song.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "guilty",
+        "context": "What do you feel most guilty about in life?",
+        "definition": "内疚的，有罪的",
+        "exampleSentence": "I feel guilty about not calling my parents more often."
+      },
+      {
+        "word": "saved up",
+        "context": "have anything saved up",
+        "definition": "存下来，储蓄",
+        "exampleSentence": "We've saved up enough for a down payment."
+      },
+      {
+        "word": "productively",
+        "context": "used that time more productively",
+        "definition": "有成效地",
+        "exampleSentence": "I need to use my weekends more productively."
+      },
+      {
+        "word": "real estate license",
+        "context": "I had my real estate license",
+        "definition": "房地产执照",
+        "exampleSentence": "She got her real estate license last year."
+      },
+      {
+        "word": "networking",
+        "context": "looking for business or networking with other brokers",
+        "definition": "建立人脉",
+        "exampleSentence": "Networking is key to finding new opportunities."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "I wish I did.",
+        "fromStory": "I wish I did.",
+        "explanation": "\"我但愿我有。\"简洁表达遗憾。比\"I wish I had saved more\"更口语化。",
+        "practicePrompts": [
+          "你希望自己做过但没做的事",
+          "一个小遗憾"
+        ]
+      }
+    ],
+    "keywords": [
+      "guilty",
+      "life's not over",
+      "saved up",
+      "leave behind",
+      "stay at home",
+      "two daughters",
+      "turned out great",
+      "ten years",
+      "8:30 to 4:30",
+      "productively",
+      "real estate license",
+      "networking",
+      "played guitar",
+      "write a song"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "What does he regret?",
+        "options": [
+          "Not having children",
+          "Not saving money for his family",
+          "Getting divorced",
+          "Working too much"
+        ],
+        "correctIndex": 1,
+        "explanation": "他后悔没有为家人存下钱。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"saved up\" mean?",
+        "options": [
+          "救援",
+          "储蓄/存下来",
+          "保护",
+          "节省时间"
+        ],
+        "correctIndex": 1,
+        "explanation": "save up = 存钱。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "He stayed home with his daughters for _____ years.",
+        "options": [
+          "five",
+          "ten",
+          "fifteen",
+          "twenty"
+        ],
+        "correctIndex": 1,
+        "explanation": "他在家陪了女儿十年。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What did he usually do with his free time?",
+        "options": [
+          "Networked with brokers",
+          "Played guitar or wrote songs",
+          "Looked for business",
+          "Studied"
+        ],
+        "correctIndex": 1,
+        "explanation": "他通常回家弹吉他或写歌。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"productively\" mean?",
+        "options": [
+          "有成果的",
+          "有成效地",
+          "生产地",
+          "创造地"
+        ],
+        "correctIndex": 1,
+        "explanation": "productively = 有产出/有成效地。"
+      }
+    ]
+  },
+  {
+    "title": "Low Point",
+    "content": "\"I've written so many stories and novellas that nobody will look at, plays that I can't get produced, screenplays that will never be made. Everything is so branded these days in the art world, it's so hard for an outsider to get work.\" \"In what way would you consider yourself an 'outsider?'\" \"I'm interested in failure, so those are the themes that I like to explore. But we live in a society that celebrates triumphalism. A society wants art that reaffirms itself. We want to read about characters that win.\" \"What was your lowest moment as an artist?\" \"I worked on a screenplay for two years, and it had just been turned down by the fifth theater in a month, and I remember walking down 5th Avenue in the middle of winter, tossing the pages one by one into the slush, vowing never to do it again. It was just a few blocks from here, actually.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "novella",
+        "context": "stories and novellas that nobody will look at",
+        "definition": "中篇小说",
+        "exampleSentence": "She published a novella before her first full novel."
+      },
+      {
+        "word": "branded",
+        "context": "Everything is so branded these days",
+        "definition": "品牌化的，标签化的",
+        "exampleSentence": "The art world is so branded — if you don't have a name, you're invisible."
+      },
+      {
+        "word": "triumphalism",
+        "context": "a society that celebrates triumphalism",
+        "definition": "胜利主义（只赞美成功）",
+        "exampleSentence": "Our culture of triumphalism leaves no room for stories about failure."
+      },
+      {
+        "word": "slush",
+        "context": "tossing the pages one by one into the slush",
+        "definition": "融雪，泥泞的雪水",
+        "exampleSentence": "The streets were covered in slush after the snowstorm."
+      },
+      {
+        "word": "vowing",
+        "context": "vowing never to do it again",
+        "definition": "发誓",
+        "exampleSentence": "He left the casino, vowing never to gamble again."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "it's so hard for [someone] to [do something]",
+        "fromStory": "it's so hard for an outsider to get work",
+        "explanation": "对某人来说做某事非常困难。",
+        "practicePrompts": [
+          "什么让你觉得进入某个圈子很难",
+          "你在哪个领域感到自己是局外人"
+        ]
+      }
+    ],
+    "keywords": [
+      "stories",
+      "novellas",
+      "plays",
+      "screenplays",
+      "branded",
+      "outsider",
+      "failure",
+      "triumphalism",
+      "reaffirms",
+      "lowest moment",
+      "turned down",
+      "5th Avenue",
+      "winter",
+      "tossing pages",
+      "slush",
+      "vowing"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "What themes does the narrator like to explore?",
+        "options": [
+          "Success",
+          "Failure",
+          "Romance",
+          "Adventure"
+        ],
+        "correctIndex": 1,
+        "explanation": "他对失败感兴趣，所以探索失败的主题。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"triumphalism\" mean?",
+        "options": [
+          "失败主义",
+          "胜利主义/只赞美成功",
+          "悲观主义",
+          "现实主义"
+        ],
+        "correctIndex": 1,
+        "explanation": "triumphalism = 只赞美胜利和成功的社会文化。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "He tossed his screenplay pages into the _____ on 5th Avenue.",
+        "options": [
+          "trash",
+          "river",
+          "slush",
+          "fire"
+        ],
+        "correctIndex": 2,
+        "explanation": "他把剧本一页一页扔进冬天的融雪里。"
+      },
+      {
+        "type": "comprehension",
+        "question": "How many times had his screenplay been turned down?",
+        "options": [
+          "Three times",
+          "Five times",
+          "Ten times",
+          "Once"
+        ],
+        "correctIndex": 1,
+        "explanation": "一个月内被五家剧院拒绝。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"vowing\" mean?",
+        "options": [
+          "投票",
+          "发誓/决心",
+          "希望",
+          "计划"
+        ],
+        "correctIndex": 1,
+        "explanation": "vowing = 郑重发誓。"
+      }
+    ]
+  },
+  {
+    "title": "Situationship",
+    "content": "\"I got into a bit of a situationship, and now it's over. We weren't exactly 'together' together. Nothing official. But we were together every day for like three months: hanging out, talking every day at school, things like that. But then he just switched up on me, switched up crazy. Didn't call me after twelve on New Year's Eve. Completely dubbed me. Then he's trying to have breakfast the next day, but I ignored him, because he dubbed me on New Year's Eve. After that he stopped texting completely. I spent five days in bed. Looking at old pictures. FaceTiming with friends. Crying. Then yesterday I texted him and he responded with one word. He might as well have not responded. And I was like, whatever. So I made myself a smoothie. I came outside to sit in the sun. And it's all over for him now, because I've got that New Year energy. I can feel it. It's on me. If he comes back now, it's a dubb for him.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "situationship",
+        "context": "I got into a bit of a situationship",
+        "definition": "暧昧关系（非正式恋爱关系）",
+        "exampleSentence": "They're not dating — it's more of a situationship."
+      },
+      {
+        "word": "switched up",
+        "context": "he just switched up on me",
+        "definition": "突然改变态度/行为",
+        "exampleSentence": "Everything was fine and then he just switched up."
+      },
+      {
+        "word": "dubbed",
+        "context": "Completely dubbed me.",
+        "definition": "放鸽子，不理人（俚语）",
+        "exampleSentence": "He completely dubbed me on my birthday."
+      },
+      {
+        "word": "might as well",
+        "context": "He might as well have not responded.",
+        "definition": "还不如...",
+        "exampleSentence": "His apology was so half-hearted, he might as well not have bothered."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "might as well have [done]",
+        "fromStory": "He might as well have not responded.",
+        "explanation": "\"还不如...\"——表达某件事做了和没做一样",
+        "practicePrompts": [
+          "一个敷衍的道歉",
+          "一个毫无意义的回复"
+        ]
+      },
+      {
+        "pattern": "I've got that [New Year/New Day] energy.",
+        "fromStory": "I've got that New Year energy.",
+        "explanation": "\"我有那股劲儿了\"——表达重新振作、焕然一新。",
+        "practicePrompts": [
+          "描述重新振作的感觉",
+          "新年新气象"
+        ]
+      }
+    ],
+    "keywords": [
+      "situationship",
+      "together together",
+      "official",
+      "three months",
+      "switched up",
+      "New Year's Eve",
+      "dubbed",
+      "five days in bed",
+      "FaceTiming",
+      "crying",
+      "one word",
+      "might as well",
+      "smoothie",
+      "sun",
+      "New Year energy"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "How long were they \"together\"?",
+        "options": [
+          "One week",
+          "One month",
+          "Three months",
+          "One year"
+        ],
+        "correctIndex": 2,
+        "explanation": "他们每天在一起大概三个月。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What is a \"situationship\"?",
+        "options": [
+          "正式恋爱关系",
+          "暧昧/非正式关系",
+          "工作关系",
+          "友谊"
+        ],
+        "correctIndex": 1,
+        "explanation": "situationship = 不明确的暧昧关系。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "After being dubbed on New Year's Eve, she spent _____ in bed.",
+        "options": [
+          "one day",
+          "three days",
+          "five days",
+          "a week"
+        ],
+        "correctIndex": 2,
+        "explanation": "她在床上躺了五天。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What made her feel better?",
+        "options": [
+          "He apologized",
+          "She made a smoothie and sat in the sun",
+          "Her friends came over",
+          "She went to a party"
+        ],
+        "correctIndex": 1,
+        "explanation": "她做了杯smoothie，出门晒太阳，感觉一切都过去了。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"dubbed\" mean in this context?",
+        "options": [
+          "配音",
+          "放鸽子/不理人",
+          "打电话",
+          "发信息"
+        ],
+        "correctIndex": 1,
+        "explanation": "dubbed = 放鸽子，故意不理你。"
+      }
+    ]
+  },
+  {
+    "title": "Continuing Education Memories",
+    "content": "\"I just came back from class. I'm in a continuing education program at a nearby college — it's helping hold the Alzheimer's at bay and keeping me out of the nursing home. Today was Genetics And Epigenetics. Tomorrow is French New Wave Film. Friday is Sociology and Religion. It's where I get most of my socialization, too. It's a bunch of widows and widowers like me.\" \"Do you remember the saddest moment of your life?\" \"When my wife told me she wanted to go to hospice.\" \"Do you remember the greatest day you ever spent with your wife?\" \"We took a cruise in Antarctica, and the weather was great, so the captain took us deeper than he normally goes, and we were floating among the icebergs, and the seals were laying out in the sun, and I remember both of us agreeing that it was the greatest day.\"",
+    "source": "Humans of New York (S2)",
+    "vocabulary": [
+      {
+        "word": "continuing education",
+        "context": "a continuing education program",
+        "definition": "继续教育，成人教育",
+        "exampleSentence": "She enrolled in a continuing education course in art history."
+      },
+      {
+        "word": "hold at bay",
+        "context": "helping hold the Alzheimer's at bay",
+        "definition": "遏制，阻挡",
+        "exampleSentence": "Exercise helps hold aging at bay."
+      },
+      {
+        "word": "socialization",
+        "context": "where I get most of my socialization",
+        "definition": "社交活动",
+        "exampleSentence": "The senior center provides important socialization for the elderly."
+      },
+      {
+        "word": "hospice",
+        "context": "she wanted to go to hospice",
+        "definition": "临终关怀",
+        "exampleSentence": "He spent his final weeks in hospice care."
+      },
+      {
+        "word": "iceberg",
+        "context": "floating among the icebergs",
+        "definition": "冰山",
+        "exampleSentence": "The ship navigated carefully around the icebergs."
+      }
+    ],
+    "patterns": [
+      {
+        "pattern": "hold [something] at bay",
+        "fromStory": "holding the Alzheimer's at bay",
+        "explanation": "把（不好的东西）挡住，不让它靠近",
+        "practicePrompts": [
+          "你用什么方法抵抗衰老",
+          "如何抵御焦虑"
+        ]
+      },
+      {
+        "pattern": "I remember both of us agreeing that [X].",
+        "fromStory": "I remember both of us agreeing that it was the greatest day.",
+        "explanation": "\"我记得我们都一致认为...\"——表达共同的美好记忆。",
+        "practicePrompts": [
+          "你和谁共同认为某件事很棒",
+          "一段共同的美好回忆"
+        ]
+      }
+    ],
+    "keywords": [
+      "continuing education",
+      "Alzheimer's",
+      "nursing home",
+      "Genetics",
+      "French New Wave Film",
+      "Sociology",
+      "widows",
+      "saddest moment",
+      "hospice",
+      "greatest day",
+      "cruise",
+      "Antarctica",
+      "icebergs",
+      "seals",
+      "greatest day"
+    ],
+    "quiz": [
+      {
+        "type": "comprehension",
+        "question": "Why is he taking continuing education classes?",
+        "options": [
+          "For a degree",
+          "To keep his mind active and socialize",
+          "For a job",
+          "His wife made him"
+        ],
+        "correctIndex": 1,
+        "explanation": "课程帮他抵抗老年痴呆，还能社交。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What does \"hold at bay\" mean?",
+        "options": [
+          "加速",
+          "遏制/阻挡",
+          "接受",
+          "拥抱"
+        ],
+        "correctIndex": 1,
+        "explanation": "hold at bay = 把（疾病/危险）挡在外面。"
+      },
+      {
+        "type": "fill-blank",
+        "question": "The saddest moment was when his wife told him she wanted to go to _____.",
+        "options": [
+          "hospital",
+          "hospice",
+          "abroad",
+          "therapy"
+        ],
+        "correctIndex": 1,
+        "explanation": "hospice = 临终关怀。"
+      },
+      {
+        "type": "comprehension",
+        "question": "What was the greatest day with his wife?",
+        "options": [
+          "Their wedding",
+          "A cruise in Antarctica",
+          "The birth of their child",
+          "Their first date"
+        ],
+        "correctIndex": 1,
+        "explanation": "在南极洲的游轮上，浮在冰山之间。"
+      },
+      {
+        "type": "vocabulary",
+        "question": "What is a \"widow\"?",
+        "options": [
+          "离婚的人",
+          "丧偶的人",
+          "单身的人",
+          "分居的人"
+        ],
+        "correctIndex": 1,
+        "explanation": "widow(女)/widower(男) = 失去配偶的人。"
+      }
+    ]
+  }
+]

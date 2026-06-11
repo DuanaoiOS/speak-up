@@ -202,30 +202,19 @@ export default function ChatPage() {
   const role = ROLES.find((r) => r.id === activeRole);
 
   return (
-    <div className="flex flex-col" style={{ height: 'calc(100vh - 8rem)' }}>
+    <div className="fixed inset-0 top-[3.5rem] bottom-16 z-0 flex flex-col bg-white pb-safe dark:bg-slate-900 md:bottom-0 md:static md:z-auto md:h-auto md:min-h-[70vh]" style={{ top: 'calc(3.5rem + env(safe-area-inset-top, 0px))', bottom: 'calc(4rem + env(safe-area-inset-bottom, 0px))' }}>
       {/* Chat header */}
-      <div className="flex items-center justify-between border-b border-slate-200 pb-3 dark:border-slate-700">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => setActiveRole(null as any)}
-            className="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400"
-          >
-            ← 返回
-          </button>
+      <div className="flex items-center justify-between border-b border-slate-200 px-1 pb-3 dark:border-slate-700 shrink-0">
+        <div className="flex items-center gap-2">
+          <button onClick={() => setActiveRole(null as any)} className="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400">← 返回</button>
           <span className="text-lg">{role?.icon}</span>
-          <span className="font-semibold">{role?.name}</span>
+          <span className="font-semibold text-sm">{role?.name}</span>
         </div>
-        <button
-          onClick={clearChat}
-          className="rounded p-1.5 text-slate-400 hover:text-red-500"
-          title="清除对话"
-        >
-          <Trash2 className="h-4 w-4" />
-        </button>
+        <button onClick={clearChat} className="rounded p-1.5 text-slate-400 hover:text-red-500" title="清除对话"><Trash2 className="h-4 w-4" /></button>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto py-4 space-y-4">
+      <div className="flex-1 overflow-y-auto py-3 space-y-3">
         {messages.length === 0 && (
           <div className="text-center text-slate-400 py-12">
             <p>开始对话吧！AI 会以 {role?.name} 的身份跟你聊天。</p>
@@ -233,28 +222,15 @@ export default function ChatPage() {
           </div>
         )}
         {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`flex gap-3 ${msg.role === 'user' ? 'justify-end' : ''}`}
-          >
+          <div key={msg.id} className={`flex gap-2 ${msg.role === 'user' ? 'justify-end' : ''}`}>
             {msg.role === 'assistant' && (
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900/30 shrink-0">
-                <Bot className="h-4 w-4" />
-              </div>
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-100 text-primary-600 dark:bg-primary-900/30 shrink-0"><Bot className="h-3.5 w-3.5" /></div>
             )}
-            <div
-              className={`max-w-[80%] rounded-xl px-4 py-2.5 text-sm ${
-                msg.role === 'user'
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200'
-              }`}
-            >
+            <div className={`max-w-[80%] rounded-xl px-3.5 py-2.5 text-sm leading-relaxed ${msg.role === 'user' ? 'bg-primary-600 text-white' : 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200'}`}>
               {msg.content || (msg.role === 'assistant' && isStreaming ? '...' : '')}
             </div>
             {msg.role === 'user' && (
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 shrink-0">
-                <User className="h-4 w-4 text-slate-500" />
-              </div>
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 shrink-0"><User className="h-3.5 w-3.5 text-slate-500" /></div>
             )}
           </div>
         ))}
@@ -262,52 +238,37 @@ export default function ChatPage() {
       </div>
 
       {/* Error */}
-      {error && (
-        <div className="rounded-lg bg-red-50 px-4 py-2 text-sm text-red-600 dark:bg-red-900/20 dark:text-red-400">
-          {error}
-        </div>
-      )}
+      {error && <div className="shrink-0 rounded-lg bg-red-50 px-3 py-1.5 text-xs text-red-600 dark:bg-red-900/20 dark:text-red-400">{error}</div>}
 
-      {/* Input */}
-      <div className="border-t border-slate-200 pt-3 dark:border-slate-700">
-        {interimText && (
-          <div className="mb-1 text-sm italic text-slate-400">{interimText}</div>
-        )}
-        <div className="flex items-end gap-2">
-          <div className="flex-1 relative">
-            <textarea
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                  e.preventDefault();
-                  sendMessage();
-                }
-              }}
-              placeholder={isListening ? '正在聆听...' : '输入消息，或点击麦克风说话...'}
-              rows={2}
-              className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm resize-none focus:border-primary-400 focus:outline-none dark:border-slate-600 dark:bg-slate-800"
-            />
-          </div>
-          <div className="flex gap-1">
-            <button
-              onClick={toggleListening}
-              className={`rounded-lg p-2.5 ${
-                isListening
-                  ? 'bg-red-500 text-white animate-pulse'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
-              }`}
-            >
-              {isListening ? <Square className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-            </button>
-            <button
-              onClick={sendMessage}
-              disabled={!input.trim() || isStreaming}
-              className="rounded-lg bg-primary-600 p-2.5 text-white hover:bg-primary-700 disabled:opacity-50"
-            >
-              <Send className="h-5 w-5" />
-            </button>
-          </div>
+      {/* Input — fixed at bottom */}
+      <div className="shrink-0 border-t border-slate-200 bg-white pt-2.5 pb-3 dark:border-slate-700 dark:bg-slate-900" style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}>
+        {interimText && <div className="mb-1 text-xs italic text-slate-400">{interimText}</div>}
+        <div className="flex items-center gap-1.5">
+          <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }}
+            placeholder={isListening ? '正在聆听...' : '输入消息...'}
+            rows={1}
+            className="flex-1 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm resize-none focus:border-primary-400 focus:outline-none dark:border-slate-600 dark:bg-slate-800"
+          />
+          <button
+            onTouchStart={(e) => { e.preventDefault(); if (!isListening) toggleListening(); }}
+            onTouchEnd={(e) => { e.preventDefault(); if (isListening) toggleListening(); }}
+            onMouseDown={() => { if (!isListening) toggleListening(); }}
+            onMouseUp={() => { if (isListening) toggleListening(); }}
+            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl select-none touch-none transition-colors ${isListening ? 'bg-red-500 text-white animate-pulse' : 'bg-slate-100 text-slate-600 active:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'}`}
+            style={{ WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
+          >
+            {isListening ? <Square className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
+          </button>
+          <button
+            onClick={sendMessage}
+            disabled={!input.trim() || isStreaming}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-600 text-white hover:bg-primary-700 disabled:opacity-40"
+          >
+            <Send className="h-4 w-4" />
+          </button>
         </div>
       </div>
     </div>

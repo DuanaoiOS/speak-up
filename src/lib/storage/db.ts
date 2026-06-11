@@ -97,3 +97,47 @@ export async function importAllData(json: string): Promise<void> {
     await set(key, value);
   }
 }
+
+// ─── Story Storage ─────────────────────────────────────────────
+
+import type { Story, StoryProgress } from '@/types/story';
+
+const STORY_KEY = 'story:';
+const STORY_LIST_KEY = 'story:list';
+
+export async function saveStory(story: Story): Promise<void> {
+  await set(`${STORY_KEY}${story.id}`, story);
+  const list = (await get<string[]>(STORY_LIST_KEY)) || [];
+  if (!list.includes(story.id)) {
+    list.unshift(story.id);
+    await set(STORY_LIST_KEY, list);
+  }
+}
+
+export async function getStory(id: string): Promise<Story | undefined> {
+  return get(`${STORY_KEY}${id}`);
+}
+
+export async function getAllStories(): Promise<Story[]> {
+  const list = (await get<string[]>(STORY_LIST_KEY)) || [];
+  const stories: Story[] = [];
+  for (const id of list) {
+    const story = await get(`${STORY_KEY}${id}`);
+    if (story) stories.push(story as Story);
+  }
+  return stories.sort((a, b) => b.createdAt - a.createdAt);
+}
+
+export async function deleteStory(id: string): Promise<void> {
+  await del(`${STORY_KEY}${id}`);
+  const list = (await get<string[]>(STORY_LIST_KEY)) || [];
+  await set(STORY_LIST_KEY, list.filter((lid) => lid !== id));
+}
+
+export async function saveStoryProgress(storyId: string, progress: StoryProgress): Promise<void> {
+  await set(`story:progress:${storyId}`, progress);
+}
+
+export async function getStoryProgress(storyId: string): Promise<StoryProgress | undefined> {
+  return get(`story:progress:${storyId}`);
+}
