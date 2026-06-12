@@ -101,6 +101,12 @@ struct StoryCardView: View {
     let story: StoryModel
     let index: Int
 
+    @Query private var allProgress: [StoryProgressModel]
+
+    private var isCompleted: Bool {
+        allProgress.first(where: { $0.storyId == story.id })?.completedSteps.allSatisfy({ $0 }) ?? false
+    }
+
     private let cardColors: [Color] = [
         Color(red: 0.23, green: 0.39, blue: 0.96),
         Color(red: 0.89, green: 0.40, blue: 0.25),
@@ -118,10 +124,17 @@ struct StoryCardView: View {
 
             VStack(alignment: .leading, spacing: 10) {
                 // Title
-                Text(story.title)
-                    .font(.title3.bold())
-                    .foregroundStyle(.primary)
-                    .lineLimit(1)
+                HStack(spacing: 8) {
+                    Text(story.title)
+                        .font(.title3.bold())
+                        .foregroundStyle(.primary)
+                        .lineLimit(1)
+                    if isCompleted {
+                        Image(systemName: "checkmark.seal.fill")
+                            .foregroundStyle(.green)
+                            .font(.subheadline)
+                    }
+                }
 
                 // Content preview
                 Text(String(story.content.prefix(150)).trimmingCharacters(in: .whitespaces) + "...")

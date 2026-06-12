@@ -28,9 +28,9 @@ final class ReviewViewModel {
         let item = items[currentIndex]
         item.reviewCount += 1
         item.lastReviewed = .now
-        try? dataService.modelContext.save()
+        saveContext()
         showAnswer = false
-        if currentIndex < items.count - 1 { currentIndex += 1 }
+        reloadAfterAction()
     }
 
     func toggleMastered() {
@@ -39,9 +39,26 @@ final class ReviewViewModel {
         item.mastered.toggle()
         item.reviewCount += 1
         item.lastReviewed = .now
-        try? dataService.modelContext.save()
+        saveContext()
         showAnswer = false
-        if currentIndex < items.count - 1 { currentIndex += 1 }
+        reloadAfterAction()
+    }
+
+    private func saveContext() {
+        let ctx = dataService.modelContext
+        ctx.processPendingChanges()
+        try? ctx.save()
+    }
+
+    private func reloadAfterAction() {
+        do {
+            let all = try dataService.fetchReviewItems()
+            items = applyFilter(all)
+            stats = calculateStats(all)
+            if currentIndex >= items.count {
+                currentIndex = max(0, items.count - 1)
+            }
+        } catch {}
     }
 
     func applyFilter(_ filter: String) {

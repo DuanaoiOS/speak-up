@@ -12,29 +12,31 @@ struct StorySessionView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
-    private let stepLabels = ["文章跟读", "单词造句", "句型语法", "关键词复述", "测试"]
-
     var body: some View {
         VStack(spacing: 0) {
-            // Step indicator
+            // Step indicator with icons
             StepIndicator(totalSteps: 5, currentStep: currentStep, completedSteps: completedSteps)
-                .padding(.horizontal)
-                .padding(.vertical, 6)
 
-            Text(stepLabels[currentStep])
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .padding(.bottom, 4)
+            // Swipeable content
+            TabView(selection: Binding(
+                get: { currentStep },
+                set: { newStep in
+                    if newStep > currentStep, !completedSteps[currentStep] {
+                        completeStep(currentStep)
+                    }
+                    currentStep = newStep
+                }
+            )) {
+                StoryReaderView(story: story, ttsService: ttsService).tag(0)
+                VocabTrainerView(story: story).tag(1)
+                PatternTrainerView(story: story).tag(2)
+                RetellRecorderView(story: story, audioRecorder: audioRecorder).tag(3)
+                QuizPlayerView(story: story, onQuizComplete: { completeStep(4) }).tag(4)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
 
-            // Step content — direct view switch instead of TabView
-            currentStepView
-                .frame(maxHeight: .infinity)
-
-            // Navigation
-            navButtons
-                .padding(.horizontal)
-                .padding(.vertical, 10)
-                .background(.bar)
+            // Bottom bar
+            bottomBar
         }
         .navigationTitle(story.title)
         .navigationBarTitleDisplayMode(.inline)
@@ -42,61 +44,55 @@ struct StorySessionView: View {
         .onDisappear { ttsService.stop() }
     }
 
-    // MARK: - Step Views
+    // MARK: - Bottom Bar
 
-    @ViewBuilder
-    private var currentStepView: some View {
-        switch currentStep {
-        case 0:
-            StoryReaderView(story: story, ttsService: ttsService)
-        case 1:
-            VocabTrainerView(story: story)
-        case 2:
-            PatternTrainerView(story: story)
-        case 3:
-            RetellRecorderView(story: story, audioRecorder: audioRecorder)
-        case 4:
-            QuizPlayerView(story: story, onQuizComplete: { completeStep(4) })
-        default:
-            EmptyView()
-        }
-    }
-
-    // MARK: - Navigation
-
-    private var navButtons: some View {
-        HStack {
-            Button {
-                if currentStep > 0 { currentStep -= 1 }
-            } label: {
-                Label("上一步", systemImage: "chevron.left")
-                    .font(.callout)
+    private var bottomBar: some View {
+        HStack(spacing: 12) {
+            // Step pagination dots
+            HStack(spacing: 6) {
+                ForEach(0..<5, id: \.self) { i in
+                    Circle()
+                        .fill(i == currentStep ? .blue : completedSteps[i] ? .green : .secondary.opacity(0.25))
+                        .frame(width: 6, height: 6)
+                }
             }
-            .disabled(currentStep == 0)
-            .opacity(currentStep == 0 ? 0.3 : 1)
 
             Spacer()
 
+            // Action button
             if currentStep < 4 {
                 Button {
                     if !completedSteps[currentStep] { completeStep(currentStep) }
-                    currentStep += 1
+                    withAnimation { currentStep += 1 }
                 } label: {
-                    Label("下一步", systemImage: "chevron.right")
-                        .font(.callout)
+                    HStack(spacing: 4) {
+                        Text("下一步")
+                        Image(systemName: "chevron.right")
+                    }
+                    .font(.subheadline.bold())
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
                 }
                 .buttonStyle(.borderedProminent)
             } else if completedSteps[4] {
                 Button {
                     dismiss()
                 } label: {
-                    Label("完成", systemImage: "checkmark")
-                        .font(.callout)
+                    HStack(spacing: 4) {
+                        Image(systemName: "checkmark")
+                        Text("完成训练")
+                    }
+                    .font(.subheadline.bold())
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.green)
             }
         }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 10)
+        .background(.bar)
     }
 
     // MARK: - Progress
