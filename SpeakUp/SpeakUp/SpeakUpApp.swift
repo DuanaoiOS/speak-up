@@ -22,8 +22,7 @@ struct SpeakUpApp: App {
 }
 
 struct ContentView: View {
-    @Query(filter: #Predicate<SettingsModel> { $0.id == "singleton" })
-    private var settings: [SettingsModel]
+    @AppStorage("theme") private var theme: String = "light"
 
     @State private var selectedTab = 0
     @State private var showSplash = true
@@ -59,7 +58,7 @@ struct ContentView: View {
             .opacity(showSplash ? 0 : 1)
         }
         .tint(.blue)
-        .preferredColorScheme(settings.first?.theme == "dark" ? .dark : .light)
+        .preferredColorScheme(theme == "dark" ? .dark : .light)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
                 withAnimation(.easeOut(duration: 0.4)) {

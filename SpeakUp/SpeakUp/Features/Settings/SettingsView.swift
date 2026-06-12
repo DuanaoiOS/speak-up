@@ -15,7 +15,7 @@ struct SettingsView: View {
     @State private var openaiModel: String = ""
     @State private var ttsEnabled: Bool = true
     @State private var ttsRate: Double = 0.35
-    @State private var theme: String = "light"
+    @AppStorage("theme") private var theme: String = "light"
     @State private var initialized: Bool = false
 
     @State private var showAnthropicKey: Bool = false
