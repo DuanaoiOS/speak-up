@@ -146,6 +146,7 @@ struct PatternTrainerView: View {
             }
         }
         .padding()
+        .scrollDismissesKeyboard(.interactively)
         .onAppear { addToReview() }
         .onChange(of: currentIndex) { _, _ in addToReview() }
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03A2491BC3525E2702D7AD92 /* builtin_stories.json in Resources */ = {isa = PBXBuildFile; fileRef = A10C052E016EFC4488F3D84B /* builtin_stories.json */; };
+		14A4AB5A17E173541BB9B3E1 /* Translation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FDDA44E462A886B4B101C5 /* Translation.framework */; };
 		1537C8F97E2B810BFF3F1578 /* StepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E41F0BF34CD34EE78D316C /* StepIndicator.swift */; };
 		1DF110ABB3123FBCDC6F20A6 /* StorySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B21D8C3CB30A4015018AC42 /* StorySessionView.swift */; };
 		2312EE53FFD083A0083C4F1C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27284B783295BC8724A840B /* SettingsView.swift */; };
@@ -71,6 +72,7 @@
 		6EE2029F82A7233F8DC52500 /* SpeakUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakUpApp.swift; sourceTree = "<group>"; };
 		6F5E3A14F2E328277FAF4706 /* SpeakButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakButton.swift; sourceTree = "<group>"; };
 		721D2E0E3AAADA3C8CC909F5 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		72FDDA44E462A886B4B101C5 /* Translation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Translation.framework; path = System/Library/Frameworks/Translation.framework; sourceTree = SDKROOT; };
 		7507B5BE8631B5D6B4AFBF48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7558D972183E31C53D8147A2 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		8F450EAD2E423E1932321503 /* StoryImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImporter.swift; sourceTree = "<group>"; };
@@ -97,6 +99,17 @@
 		FB722EB49B064AEB8D5038FC /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		FDB2B3E55E234F36CA4E8139 /* VoiceInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0EADECEBC598141582CA8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A4AB5A17E173541BB9B3E1 /* Translation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2C3F7F05F1A18185A3EEEA1B /* Review */ = {
@@ -140,6 +153,14 @@
 				C8D22E544791DDF740BDE92A /* StoryProgressModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5571E59E155D0AF055B923CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72FDDA44E462A886B4B101C5 /* Translation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		57850DB786067437D9C53AF3 /* SpeakUp */ = {
@@ -214,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				57850DB786067437D9C53AF3 /* SpeakUp */,
+				5571E59E155D0AF055B923CF /* Frameworks */,
 				BC9BF5D00CFF5B656ABB0041 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -286,6 +308,7 @@
 			buildPhases = (
 				4DFCB6BC377A5386C58C8FAE /* Sources */,
 				FDFCDAD85B42CB486A14DBCF /* Resources */,
+				C0EADECEBC598141582CA8BC /* Frameworks */,
 			);
 			buildRules = (
 			);

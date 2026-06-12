@@ -140,6 +140,7 @@ struct VocabTrainerView: View {
             }
         }
         .padding()
+        .scrollDismissesKeyboard(.interactively)
         .onAppear {
             addToReview()
         }

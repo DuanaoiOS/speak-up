@@ -43,13 +43,13 @@ interface SettingsStore {
 }
 
 export const OPENAI_COMPATIBLE_PRESETS = [
-  { name: 'OpenAI', baseUrl: 'https://api.openai.com/v1', model: 'gpt-4o' },
-  { name: 'DeepSeek', baseUrl: 'https://api.deepseek.com/v1', model: 'deepseek-chat' },
-  { name: 'Moonshot (Kimi)', baseUrl: 'https://api.moonshot.cn/v1', model: 'moonshot-v1-8k' },
-  { name: 'Groq', baseUrl: 'https://api.groq.com/openai/v1', model: 'llama-3.1-8b-instant' },
-  { name: 'Together AI', baseUrl: 'https://api.together.xyz/v1', model: 'meta-llama/Llama-3-8b-chat-hf' },
+  { name: 'OpenAI', baseUrl: 'https://api.openai.com/v1', model: 'gpt-4.1' },
+  { name: 'DeepSeek', baseUrl: 'https://api.deepseek.com/v1', model: 'deepseek-v4-pro' },
+  { name: 'Moonshot (Kimi)', baseUrl: 'https://api.moonshot.cn/v1', model: 'kimi2.6' },
+  { name: 'Groq', baseUrl: 'https://api.groq.com/openai/v1', model: 'llama-4-scout-17b-16e-instruct' },
+  { name: 'Together AI', baseUrl: 'https://api.together.xyz/v1', model: 'meta-llama/Llama-4-Maverick-17B-128E-Instruct' },
   { name: 'Agnes AI', baseUrl: 'https://apihub.agnes-ai.com/v1', model: 'agnes-2.0-flash' },
-  { name: 'Ollama (本地)', baseUrl: 'http://localhost:11434/v1', model: 'llama3' },
+  { name: 'Ollama (本地)', baseUrl: 'http://localhost:11434/v1', model: 'llama3.2' },
   { name: '自定义', baseUrl: '', model: '' },
 ];
 

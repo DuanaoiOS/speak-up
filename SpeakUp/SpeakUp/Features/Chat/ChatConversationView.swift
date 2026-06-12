@@ -95,6 +95,7 @@ struct ChatConversationView: View {
                     }
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
 
             // Error
             if let error = viewModel.error {
