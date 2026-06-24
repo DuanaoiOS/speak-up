@@ -12,6 +12,11 @@ enum BuiltInStories {
             return []
         }
         return stories.enumerated().map { index, s in
+            let w = index < 5 ? 1 : 2
+            let l = (index % 5) + 1
+            let wk1Themes = ["自我成长", "人生选择", "童年回忆", "亲情关系", "青春成长"]
+            let wk2Themes = ["人生愿望", "家庭遗憾", "艺术追求", "情感关系", "生命意义"]
+            let themes = wk1Themes + wk2Themes
             let createdAt = Date.now.addingTimeInterval(TimeInterval(-index * 3600 * 24))
             return StoryModel(
                 id: "builtin-\(index + 1)",
@@ -19,6 +24,7 @@ enum BuiltInStories {
                 content: s.content,
                 source: s.source,
                 createdAt: createdAt,
+                week: w, level: l, theme: themes[index],
                 vocabulary: s.vocabulary.map { VocabWord(word: $0.word, context: $0.context, definition: $0.definition, exampleSentence: $0.exampleSentence) },
                 patterns: s.patterns.map { SentencePattern(pattern: $0.pattern, fromStory: $0.fromStory, explanation: $0.explanation, practicePrompts: $0.practicePrompts) },
                 keywords: s.keywords,

@@ -36,6 +36,9 @@ final class StoryModel {
     var imageUrl: String?
     var audioUrl: String?
     var createdAt: Date
+    var week: Int
+    var level: Int       // 1-5 within a week
+    var theme: String    // weekly theme in Chinese
 
     // JSON-encoded arrays
     @Attribute(.externalStorage) var vocabularyJSON: Data?
@@ -45,6 +48,7 @@ final class StoryModel {
 
     init(id: String, title: String, content: String, source: String,
          imageUrl: String? = nil, audioUrl: String? = nil, createdAt: Date = .now,
+         week: Int = 1, level: Int = 1, theme: String = "",
          vocabulary: [VocabWord] = [], patterns: [SentencePattern] = [],
          keywords: [String] = [], quiz: [QuizQuestion] = []) {
         self.id = id
@@ -54,6 +58,9 @@ final class StoryModel {
         self.imageUrl = imageUrl
         self.audioUrl = audioUrl
         self.createdAt = createdAt
+        self.week = week
+        self.level = level
+        self.theme = theme
         self.vocabularyJSON = Self.encode(vocabulary)
         self.patternsJSON = Self.encode(patterns)
         self.keywordsJSON = Self.encode(keywords)

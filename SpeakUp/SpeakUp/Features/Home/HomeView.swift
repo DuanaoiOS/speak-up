@@ -6,6 +6,15 @@ struct HomeView: View {
     @Query(filter: #Predicate<SettingsModel> { $0.id == "singleton" })
     private var settings: [SettingsModel]
 
+    @State private var showGenerateSheet: Bool = false
+    @State private var generateTheme: String = ""
+
+    private let weekThemes = [
+        "职场沟通", "科技生活", "人际关系", "自我突破",
+        "文化碰撞", "人生转折", "梦想与现实", "城市故事",
+        "亲情时刻", "成长烦恼"
+    ]
+
     var body: some View {
         Group {
             if viewModel.isLoading {
@@ -15,147 +24,279 @@ struct HomeView: View {
             }
         }
         .navigationTitle("SpeakUp")
-        .task { viewModel.loadStories() }
+        .task { viewModel.load() }
+        .onAppear { viewModel.refreshProgress() }
+        .sheet(isPresented: $showGenerateSheet) {
+            generateSheet
+        }
     }
 
-    private var currentSettings: SettingsModel? { settings.first }
+    // MARK: - Content
 
-    @ViewBuilder
     private var content: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                // Generate button
-                generateButton
-                    .padding(.horizontal)
+        VStack(spacing: 0) {
+            // Week header
+            weekHeader
+                .padding(.horizontal)
+                .padding(.top, 8)
 
-                // Error
+            Divider().padding(.vertical, 12)
+
+            // Level grid
+            levelGrid
+                .padding(.horizontal)
+
+            Spacer()
+
+            // Generate button for next week
+            if viewModel.weekProgress.completed == 5 && viewModel.currentWeek == viewModel.maxUnlockedWeek {
+                Button {
+                    generateTheme = weekThemes[(viewModel.currentWeek - 1) % weekThemes.count]
+                    showGenerateSheet = true
+                } label: {
+                    Label("解锁下一周", systemImage: "sparkles")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.purple)
+                .padding()
+            }
+        }
+    }
+
+    // MARK: - Week Header
+
+    private var weekHeader: some View {
+        VStack(spacing: 8) {
+            HStack {
+                Button {
+                    withAnimation { viewModel.goBackWeek() }
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.title2)
+                }
+                .opacity(viewModel.canGoBackWeek ? 1 : 0.2)
+                .disabled(!viewModel.canGoBackWeek)
+
+                Spacer()
+
+                VStack(spacing: 2) {
+                    Text("Week \(viewModel.currentWeek)")
+                        .font(.title2.bold())
+                    Text(viewModel.weekTheme)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+
+                Spacer()
+
+                Button {
+                    withAnimation { viewModel.advanceWeek() }
+                } label: {
+                    Image(systemName: "chevron.right")
+                        .font(.title2)
+                }
+                .opacity(viewModel.canAdvanceWeek ? 1 : 0.2)
+                .disabled(!viewModel.canAdvanceWeek)
+            }
+
+            // Progress bar
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 4)
+                        .fill(.secondary.opacity(0.15))
+                        .frame(height: 8)
+                    RoundedRectangle(cornerRadius: 4)
+                        .fill(
+                            viewModel.weekProgress.completed == 5
+                                ? Color.green : Color.blue
+                        )
+                        .frame(
+                            width: geo.size.width * CGFloat(viewModel.weekProgress.completed) / CGFloat(viewModel.weekProgress.total),
+                            height: 8
+                        )
+                }
+            }
+            .frame(height: 8)
+
+            Text("\(viewModel.weekProgress.completed) / \(viewModel.weekProgress.total) 关卡完成")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    // MARK: - Level Grid
+
+    private var levelGrid: some View {
+        VStack(spacing: 14) {
+            ForEach(0..<5, id: \.self) { index in
+                LevelCard(
+                    index: index,
+                    story: index < viewModel.weekStories.count ? viewModel.weekStories[index] : nil,
+                    isUnlocked: viewModel.isLevelUnlocked(index),
+                    isCompleted: viewModel.isLevelCompleted(index),
+                    isCurrent: viewModel.nextLevelIndex == index
+                )
+            }
+        }
+    }
+
+    // MARK: - Generate Sheet
+
+    private var generateSheet: some View {
+        NavigationStack {
+            VStack(spacing: 24) {
+                Spacer().frame(height: 20)
+
+                Image(systemName: "sparkles")
+                    .font(.system(size: 48))
+                    .foregroundStyle(.purple)
+
+                Text("解锁 Week \(viewModel.currentWeek + 1)")
+                    .font(.title2.bold())
+
+                Text("本周主题：\(generateTheme)")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("AI 将生成 5 篇同主题故事")
+                    Text("每篇包含词汇、句型、测试题")
+                    Text("完成后自动进入下一周")
+                }
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .padding()
+                .background(.secondary.opacity(0.06))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+
                 if let error = viewModel.error {
                     ErrorMessage(message: error)
-                        .padding(.horizontal)
                 }
 
-                // Empty state or story cards
-                if viewModel.stories.isEmpty {
-                    emptyState
-                } else {
-                    ForEach(viewModel.stories) { story in
-                        NavigationLink {
-                            StorySessionView(story: story)
-                        } label: {
-                            StoryCardView(story: story, index: viewModel.stories.firstIndex(where: { $0.id == story.id }) ?? 0)
+                Button {
+                    guard let s = settings.first else { return }
+                    let p: AIProvider = s.provider == "openai" ? .openai : .claude
+                    let key = p == .claude ? s.anthropicApiKey : s.openaiApiKey
+                    let model = p == .claude ? s.anthropicModel : s.openaiModel
+                    let baseUrl = p == .openai ? s.openaiBaseUrl : nil
+                    viewModel.generateWeek(provider: p, apiKey: key, model: model, baseUrl: baseUrl, theme: generateTheme)
+                } label: {
+                    HStack {
+                        if viewModel.isGenerating {
+                            ProgressView().scaleEffect(0.8)
+                            Text("AI 生成中...")
+                        } else {
+                            Label("开始生成", systemImage: "sparkles")
                         }
-                        .buttonStyle(.plain)
-                        .padding(.horizontal)
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 12)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.purple)
+                .disabled(viewModel.isGenerating)
+
+                Spacer()
+            }
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("取消") { showGenerateSheet = false }
                 }
             }
-            .padding(.vertical)
-        }
-    }
-
-    private var generateButton: some View {
-        Button {
-            guard let s = currentSettings else { return }
-            let provider: AIProvider = s.provider == "openai" ? .openai : .claude
-            let key = provider == .claude ? s.anthropicApiKey : s.openaiApiKey
-            let model = provider == .claude ? s.anthropicModel : s.openaiModel
-            let baseUrl = provider == .openai ? s.openaiBaseUrl : nil
-            viewModel.generateStory(provider: provider, apiKey: key, model: model, baseUrl: baseUrl)
-        } label: {
-            HStack(spacing: 8) {
-                if viewModel.isGenerating {
-                    ProgressView().scaleEffect(0.8)
-                    Text("AI 正在生成故事...")
-                } else {
-                    Image(systemName: "sparkles")
-                    Text("获取新故事")
-                }
-            }
-            .font(.headline)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 14)
-        }
-        .buttonStyle(.borderedProminent)
-        .disabled(viewModel.isGenerating)
-    }
-
-    private var emptyState: some View {
-        VStack(spacing: 12) {
-            Spacer().frame(height: 80)
-            Image(systemName: "books.vertical")
-                .font(.system(size: 48))
-                .foregroundStyle(.secondary.opacity(0.3))
-            Text("还没有故事")
-                .font(.headline)
-                .foregroundStyle(.secondary)
-            Text("点击上方按钮，AI 为你生成第一个故事")
-                .font(.subheadline)
-                .foregroundStyle(.secondary.opacity(0.5))
         }
     }
 }
 
-// MARK: - Story Card
+// MARK: - Level Card
 
-struct StoryCardView: View {
-    let story: StoryModel
+struct LevelCard: View {
     let index: Int
-
-    @Query private var allProgress: [StoryProgressModel]
-
-    private var isCompleted: Bool {
-        allProgress.first(where: { $0.storyId == story.id })?.completedSteps.allSatisfy({ $0 }) ?? false
-    }
-
-    private let cardColors: [Color] = [
-        Color(red: 0.23, green: 0.39, blue: 0.96),
-        Color(red: 0.89, green: 0.40, blue: 0.25),
-        Color(red: 0.20, green: 0.71, blue: 0.45),
-        Color(red: 0.69, green: 0.32, blue: 0.87),
-        Color(red: 0.96, green: 0.56, blue: 0.12),
-        Color(red: 0.18, green: 0.62, blue: 0.78),
-    ]
+    let story: StoryModel?
+    let isUnlocked: Bool
+    let isCompleted: Bool
+    let isCurrent: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            // Color header strip
-            cardColors[index % cardColors.count]
-                .frame(height: 6)
-
-            VStack(alignment: .leading, spacing: 10) {
-                // Title
-                HStack(spacing: 8) {
-                    Text(story.title)
-                        .font(.title3.bold())
-                        .foregroundStyle(.primary)
-                        .lineLimit(1)
-                    if isCompleted {
-                        Image(systemName: "checkmark.seal.fill")
-                            .foregroundStyle(.green)
-                            .font(.subheadline)
-                    }
+        Group {
+            if let story, isUnlocked {
+                NavigationLink {
+                    StorySessionView(story: story)
+                } label: {
+                    cardContent
                 }
-
-                // Content preview
-                Text(String(story.content.prefix(150)).trimmingCharacters(in: .whitespaces) + "...")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(3)
-                    .lineSpacing(4)
-
-                // Meta bar
-                HStack(spacing: 16) {
-                    Label("\(story.vocabulary.count)", systemImage: "character.book.closed")
-                    Label("\(story.patterns.count)", systemImage: "rectangle.and.pencil.and.ellipsis")
-                    Label("\(story.quiz.count)", systemImage: "questionmark.circle")
-                }
-                .font(.caption)
-                .foregroundStyle(.secondary)
+                .buttonStyle(.plain)
+            } else {
+                cardContent
             }
-            .padding(16)
         }
+    }
+
+    private var cardContent: some View {
+        HStack(spacing: 14) {
+            // Level number badge
+            ZStack {
+                Circle()
+                    .fill(badgeColor)
+                    .frame(width: 44, height: 44)
+                if isCompleted {
+                    Image(systemName: "checkmark")
+                        .font(.title3.bold())
+                        .foregroundStyle(.white)
+                } else if isUnlocked {
+                    Text("\(index + 1)")
+                        .font(.title3.bold())
+                        .foregroundStyle(.white)
+                } else {
+                    Image(systemName: "lock.fill")
+                        .font(.subheadline)
+                        .foregroundStyle(.white)
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                if let story {
+                    Text("Day \(index + 1)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(story.title)
+                        .font(.headline)
+                        .foregroundStyle(isUnlocked ? .primary : .secondary)
+                } else {
+                    Text("Day \(index + 1)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text("-----")
+                        .font(.headline)
+                        .foregroundStyle(.secondary.opacity(0.4))
+                }
+            }
+
+            Spacer()
+
+            if isCurrent {
+                Text("进行中")
+                    .font(.caption.bold())
+                    .foregroundStyle(.blue)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(.blue.opacity(0.1))
+                    .clipShape(Capsule())
+            }
+        }
+        .padding(14)
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .shadow(color: .black.opacity(0.06), radius: 8, y: 4)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .shadow(color: .black.opacity(isUnlocked ? 0.04 : 0.01), radius: 4, y: 2)
+        .opacity(isUnlocked ? 1 : 0.55)
+    }
+
+    private var badgeColor: Color {
+        if isCompleted { return .green }
+        if isUnlocked { return .blue }
+        return .secondary.opacity(0.4)
     }
 }

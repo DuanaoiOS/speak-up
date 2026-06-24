@@ -57,6 +57,14 @@ final class DataService {
 
     // MARK: Stories
 
+    func storiesForWeek(_ week: Int) -> [StoryModel] {
+        var descriptor = FetchDescriptor<StoryModel>(
+            sortBy: [SortDescriptor(\.level)]
+        )
+        descriptor.predicate = #Predicate { $0.week == week }
+        return (try? modelContext.fetch(descriptor)) ?? []
+    }
+
     func fetchAllStories() throws -> [StoryModel] {
         var descriptor = FetchDescriptor<StoryModel>(
             sortBy: [SortDescriptor(\.createdAt, order: .reverse)]
