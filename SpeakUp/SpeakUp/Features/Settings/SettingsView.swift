@@ -188,6 +188,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .scrollDismissesKeyboard(.interactively)
         .navigationTitle("设置")
         .onAppear { loadFromSaved() }
         .overlay(alignment: .top) {

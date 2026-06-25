@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03A2491BC3525E2702D7AD92 /* builtin_stories.json in Resources */ = {isa = PBXBuildFile; fileRef = A10C052E016EFC4488F3D84B /* builtin_stories.json */; };
-		14A4AB5A17E173541BB9B3E1 /* Translation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FDDA44E462A886B4B101C5 /* Translation.framework */; };
 		1537C8F97E2B810BFF3F1578 /* StepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E41F0BF34CD34EE78D316C /* StepIndicator.swift */; };
 		1DF110ABB3123FBCDC6F20A6 /* StorySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B21D8C3CB30A4015018AC42 /* StorySessionView.swift */; };
 		2312EE53FFD083A0083C4F1C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27284B783295BC8724A840B /* SettingsView.swift */; };
@@ -35,6 +34,7 @@
 		84C237CE4B8978E6C343E34E /* PatternTrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DAC0851758CBA90A3A12B /* PatternTrainerView.swift */; };
 		8A4A19749687BF79CEAED28F /* SpeakUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2029F82A7233F8DC52500 /* SpeakUpApp.swift */; };
 		8AB05905B71EAE005A121C4E /* SpeakButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E3A14F2E328277FAF4706 /* SpeakButton.swift */; };
+		932DA74182080FB37EFFFABD /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB65DAA480A3684C48B5391 /* DictionaryService.swift */; };
 		9493478E876523D7036DC098 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BE01F02236B2EBAB49A0EF /* AIService.swift */; };
 		A416C3D4E17D2AC32FD31AEE /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558D972183E31C53D8147A2 /* ReviewViewModel.swift */; };
 		AC22456D879C2FA4A1713951 /* StoryImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F450EAD2E423E1932321503 /* StoryImporter.swift */; };
@@ -72,7 +72,6 @@
 		6EE2029F82A7233F8DC52500 /* SpeakUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakUpApp.swift; sourceTree = "<group>"; };
 		6F5E3A14F2E328277FAF4706 /* SpeakButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakButton.swift; sourceTree = "<group>"; };
 		721D2E0E3AAADA3C8CC909F5 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		72FDDA44E462A886B4B101C5 /* Translation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Translation.framework; path = System/Library/Frameworks/Translation.framework; sourceTree = SDKROOT; };
 		7507B5BE8631B5D6B4AFBF48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7558D972183E31C53D8147A2 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		8F450EAD2E423E1932321503 /* StoryImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImporter.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		A32A15014D351BC065027892 /* icon.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = icon.svg; sourceTree = "<group>"; };
 		A4CDA8F7B71084F1CCEC828D /* SpeakUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79BA7B8B9D4600CA4EF9573 /* TTSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSService.swift; sourceTree = "<group>"; };
+		ADB65DAA480A3684C48B5391 /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
 		B1A5C60BD741260F5C4ADD20 /* StoryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryReaderView.swift; sourceTree = "<group>"; };
 		B2C2BB95CB92C44874004FB0 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		B6BEB4ECB382B355044C0305 /* ProgressDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDataModel.swift; sourceTree = "<group>"; };
@@ -99,17 +99,6 @@
 		FB722EB49B064AEB8D5038FC /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		FDB2B3E55E234F36CA4E8139 /* VoiceInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInputButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C0EADECEBC598141582CA8BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14A4AB5A17E173541BB9B3E1 /* Translation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2C3F7F05F1A18185A3EEEA1B /* Review */ = {
@@ -153,14 +142,6 @@
 				C8D22E544791DDF740BDE92A /* StoryProgressModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5571E59E155D0AF055B923CF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				72FDDA44E462A886B4B101C5 /* Translation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		57850DB786067437D9C53AF3 /* SpeakUp */ = {
@@ -235,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				57850DB786067437D9C53AF3 /* SpeakUp */,
-				5571E59E155D0AF055B923CF /* Frameworks */,
 				BC9BF5D00CFF5B656ABB0041 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -245,6 +225,7 @@
 			children = (
 				3E519635B33698971E57490E /* AudioRecorderService.swift */,
 				13A613561C7686CF77180630 /* DataService.swift */,
+				ADB65DAA480A3684C48B5391 /* DictionaryService.swift */,
 				8F450EAD2E423E1932321503 /* StoryImporter.swift */,
 				B6FD7658C7AE494DBDA02A58 /* StreakCalculator.swift */,
 				970F3DF1F8F7E5FD08FC5B3C /* AIService */,
@@ -308,7 +289,6 @@
 			buildPhases = (
 				4DFCB6BC377A5386C58C8FAE /* Sources */,
 				FDFCDAD85B42CB486A14DBCF /* Resources */,
-				C0EADECEBC598141582CA8BC /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,6 +358,7 @@
 				FE14777760EA24C37A761F8F /* ChatViewModel.swift in Sources */,
 				DDC1DF1D3BD1CD6B489332E0 /* ClaudeClient.swift in Sources */,
 				5E317FFB24A26FA19164BB1D /* DataService.swift in Sources */,
+				932DA74182080FB37EFFFABD /* DictionaryService.swift in Sources */,
 				B574B069AA735F6D39EBDD27 /* ErrorMessage.swift in Sources */,
 				3978399BFE5263749243377F /* HomeView.swift in Sources */,
 				5E4BF0A94071E2F2756F2BBD /* HomeViewModel.swift in Sources */,
@@ -546,7 +527,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z89L84VA6N;
 				INFOPLIST_FILE = SpeakUp/Resources/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,7 +545,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = Z89L84VA6N;
 				INFOPLIST_FILE = SpeakUp/Resources/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

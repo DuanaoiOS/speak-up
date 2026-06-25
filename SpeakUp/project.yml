@@ -25,7 +25,6 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_FILE: SpeakUp/Resources/Info.plist
-    dependencies:
     info:
       path: SpeakUp/Resources/Info.plist
       properties:
